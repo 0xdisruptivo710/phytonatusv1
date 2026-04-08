@@ -1,0 +1,348 @@
+================================================================================
+          PHYTONATUS - GUIA DE ASSETS PARA O SITE
+          Documento para a equipe de Marketing
+================================================================================
+
+Este documento lista TODAS as imagens, videos, logos e PDFs necessarios
+para o site da Phytonatus. Cada item inclui:
+- Onde sera usado no site
+- Dimensoes recomendadas (largura x altura em pixels)
+- Proporcao (aspect ratio)
+- Formato do arquivo
+- Observacoes tecnicas
+
+IMPORTANTE: Todas as imagens devem ser fornecidas em alta resolucao
+(2x o tamanho listado) para telas Retina/HiDPI. Ex: se a dimensao
+recomendada e 1200x675, fornecer 2400x1350.
+
+
+================================================================================
+1. VIDEOS
+================================================================================
+
+1.1  VIDEO INSTITUCIONAL (HERO)
+     Onde: Pagina inicial (Home) e Pagina Institucional
+     Proporcao: 16:9
+     Resolucao minima: 1920x1080 (Full HD)
+     Resolucao ideal: 3840x2160 (4K)
+     Formato: MP4 (codec H.264)
+     Duracao: 30 a 90 segundos
+     Tamanho max: 15MB (para carregamento rapido)
+     Observacoes:
+       - Sera usado como video de destaque nas duas paginas
+       - Deve ter um frame inicial atrativo (sera a thumbnail)
+       - Conteudo sugerido: imagens da fabrica, equipe, produtos,
+         processo produtivo, campo/natureza
+       - Audio opcional (pode ter musica de fundo suave)
+       - Se possivel, fornecer tambem uma versao curta (10-15s) para
+         usar como background animado no hero da pagina inicial
+
+1.2  VIDEO DA LINHA DE PRODUCAO
+     Onde: Pagina Private Label (secao de fotos da industria)
+     Proporcao: 16:9
+     Resolucao minima: 1920x1080 (Full HD)
+     Formato: MP4 (codec H.264)
+     Duracao: 15 a 60 segundos
+     Tamanho max: 10MB
+     Observacoes:
+       - Mostrar o processo de producao/envase
+       - Foco em qualidade, higiene, maquinario moderno
+
+
+================================================================================
+2. FOTOS DA FABRICA / EQUIPE / ESTRUTURA
+================================================================================
+
+2.1  FOTO PRINCIPAL DA FABRICA/EQUIPE
+     Onde: Pagina Institucional (secao "Nossa Historia")
+     Proporcao: 16:9
+     Dimensao: 1200 x 675 px (fornecer 2400 x 1350 px)
+     Formato: JPG ou WebP
+     Observacoes:
+       - Foto principal que representa a empresa
+       - Pode ser: fachada da fabrica, equipe reunida, ou
+         visao geral do parque industrial
+       - Boa iluminacao, qualidade profissional
+
+2.2  AREA DE PRODUCAO
+     Onde: Pagina Institucional (galeria da fabrica)
+     Proporcao: 16:9
+     Dimensao: 1200 x 675 px (fornecer 2400 x 1350 px)
+     Formato: JPG ou WebP
+     Observacoes:
+       - Foto do chao de fabrica / area produtiva
+       - Mostrar limpeza, organizacao, escala
+
+2.3  LINHA DE ENVASE
+     Onde: Pagina Institucional (galeria da fabrica)
+     Proporcao: 16:9
+     Dimensao: 1200 x 675 px (fornecer 2400 x 1350 px)
+     Formato: JPG ou WebP
+     Observacoes:
+       - Foto da linha de envase/embalagem
+       - Foco em tecnologia e qualidade
+
+2.4  LABORATORIO DE QUALIDADE
+     Onde: Pagina Institucional (galeria da fabrica)
+     Proporcao: 16:9
+     Dimensao: 1200 x 675 px (fornecer 2400 x 1350 px)
+     Formato: JPG ou WebP
+     Observacoes:
+       - Foto do laboratorio de controle de qualidade
+       - Transmitir confianca e rigor nos processos
+
+2.5  ESTOQUE E LOGISTICA
+     Onde: Pagina Institucional (galeria da fabrica)
+     Proporcao: 16:9
+     Dimensao: 1200 x 675 px (fornecer 2400 x 1350 px)
+     Formato: JPG ou WebP
+     Observacoes:
+       - Foto do setor de armazenamento/logistica
+       - Mostrar organizacao e capacidade
+
+
+================================================================================
+3. FOTOS DA INDUSTRIA (PRIVATE LABEL)
+================================================================================
+
+3.1  FOTO DA INDUSTRIA 1 (PRINCIPAL)
+     Onde: Pagina Private Label (foto grande, lado esquerdo)
+     Proporcao: 4:3
+     Dimensao: 1200 x 900 px (fornecer 2400 x 1800 px)
+     Formato: JPG ou WebP
+     Observacoes:
+       - Foto hero da secao de estrutura industrial
+       - Deve ser a mais impactante visualmente
+       - Sugestao: visao panoramica da fabrica ou linha de producao
+
+3.2  FOTO DA INDUSTRIA 2
+     Onde: Pagina Private Label (foto menor, lado direito superior)
+     Proporcao: 16:9
+     Dimensao: 800 x 450 px (fornecer 1600 x 900 px)
+     Formato: JPG ou WebP
+     Observacoes:
+       - Foto complementar da estrutura
+       - Pode ser detalhe de equipamento, processo, etc.
+
+
+================================================================================
+4. FOTOS DE INGREDIENTES
+================================================================================
+
+Todas as fotos de ingredientes sao usadas na pagina inicial (Home),
+na secao "Ingredientes puros. Rotulo limpo."
+
+FORMATO PARA TODOS: Quadrado (1:1)
+DIMENSAO: 600 x 600 px (fornecer 1200 x 1200 px)
+FORMATO DO ARQUIVO: JPG ou WebP
+
+4.1  TEXTURA DE MEL
+     Observacoes:
+       - Close-up de mel puro (textura, cor, brilho)
+       - Fundo neutro ou mel escorrendo
+       - Tom dourado natural
+
+4.2  TEXTURA DE CACAU
+     Observacoes:
+       - Close-up de cacau em po ou graos de cacau
+       - Tons marrons ricos
+
+4.3  TEXTURA DE COCO
+     Observacoes:
+       - Close-up de coco ralado, oleo de coco, ou coco partido
+       - Tons claros, textura visivel
+
+4.4  TEXTURA DE SAL ROSA
+     Observacoes:
+       - Close-up de cristais de sal rosa do Himalaia
+       - Tons rosados, cristais visiveis
+
+
+================================================================================
+5. FOTOS DE PRODUTOS POR MARCA
+================================================================================
+
+Cada marca tem uma secao dedicada na pagina "Marcas".
+Todas usam proporcao 16:9.
+
+DIMENSAO: 1200 x 675 px (fornecer 2400 x 1350 px)
+FORMATO: JPG ou WebP (fundo limpo, iluminacao profissional)
+
+5.1  FOTO PHYTONATUS
+     Onde: Pagina Marcas (secao Phytonatus)
+     Observacoes:
+       - Linha de produtos Phytonatus (bisnaga de mel, etc.)
+       - Composicao com varios produtos da marca
+       - Pode incluir elementos naturais (flores do campo)
+       - Cor de destaque da marca: Verde (#3D5C3A)
+
+5.2  FOTO EMPORIO DO MEL
+     Onde: Pagina Marcas (secao Emporio do Mel)
+     Observacoes:
+       - Linha de meis por florada, propolis, sprays
+       - Composicao premium, fundo elegante
+       - Cor de destaque da marca: Dourado/Mel (#C18A2A)
+
+5.3  FOTO EMPORIO NUTS
+     Onde: Pagina Marcas (secao Emporio Nuts)
+     Observacoes:
+       - Produtos de mercearia natural (sal rosa, cacau, oleo de coco, etc.)
+       - Composicao variada com varios produtos
+       - Cor de destaque da marca: Vermelho (#B83232)
+
+5.4  FOTO VIDA GOURMET
+     Onde: Pagina Marcas (secao Vida Gourmet)
+     Observacoes:
+       - Produtos premium gourmet (Timury, sal artesanal, etc.)
+       - Composicao sofisticada, estilo editorial
+       - Cor de destaque da marca: Vermelho Escuro (#8B2020)
+
+
+================================================================================
+6. LOGOS DAS MARCAS
+================================================================================
+
+FORMATO OBRIGATORIO: SVG (vetorial)
+FORMATO ALTERNATIVO: PNG com fundo transparente, minimo 400x400 px
+
+6.1  LOGO PHYTONATUS
+     Arquivo: /logos/phytonatus.svg
+     Onde: Header, Footer, pagina Marcas, pagina Home (cards)
+     Observacoes: Versao em cor e versao em branco (para fundo escuro)
+
+6.2  LOGO EMPORIO DO MEL
+     Arquivo: /logos/emporio-do-mel.svg
+     Onde: Pagina Marcas, pagina Home (cards)
+     Observacoes: Versao em cor e versao em branco
+
+6.3  LOGO EMPORIO NUTS
+     Arquivo: /logos/emporio-nuts.svg
+     Onde: Pagina Marcas, pagina Home (cards)
+     Observacoes: Versao em cor e versao em branco
+
+6.4  LOGO VIDA GOURMET
+     Arquivo: /logos/vida-gourmet.svg
+     Onde: Pagina Marcas, pagina Home (cards)
+     Observacoes: Versao em cor e versao em branco
+
+
+================================================================================
+7. LOGOS DE CLIENTES (SUPERMERCADOS)
+================================================================================
+
+FORMATO: SVG (preferivel) ou PNG com fundo transparente
+DIMENSAO PNG: 320 x 160 px minimo (fornecer 640 x 320 px)
+
+Estes logos aparecem em 3 paginas: Home, Private Label, Onde Encontrar.
+
+7.1  Logo Sonda Supermercados
+7.2  Logo Tust
+7.3  Logo Rede 3 (substituir pelo nome real da rede)
+7.4  Logo Rede 4 (substituir pelo nome real da rede)
+7.5  Logo Rede 5 (substituir pelo nome real da rede)
+7.6  Logo Rede 6 (substituir pelo nome real da rede)
+
+OBSERVACAO: Os nomes "Rede 1" a "Rede 4" sao provisorios.
+Favor informar os nomes reais dos clientes supermercadistas
+para atualizar no site.
+
+
+================================================================================
+8. SELOS E CERTIFICACOES
+================================================================================
+
+FORMATO: SVG (preferivel) ou PNG com fundo transparente
+DIMENSAO PNG: 160 x 160 px minimo (fornecer 320 x 320 px)
+FORMA: Circular (serao exibidos em circulos no site)
+
+8.1  Selo ISO 9001
+8.2  Selo HACCP
+8.3  Selo Organico (selo oficial do MAPA)
+8.4  Selo SIF (Servico de Inspecao Federal)
+8.5  Selo Arte
+
+Onde: Pagina Institucional e Pagina Private Label
+
+
+================================================================================
+9. PDFs
+================================================================================
+
+9.1  TABELA NUTRICIONAL - PHYTONATUS
+     Onde: Pagina Marcas (botao "Tabela Nutricional" da marca Phytonatus)
+     Formato: PDF
+     Observacoes: Informacoes nutricionais dos produtos da marca
+
+9.2  TABELA NUTRICIONAL - EMPORIO DO MEL
+     Onde: Pagina Marcas (botao "Tabela Nutricional" da marca Emporio do Mel)
+     Formato: PDF
+
+9.3  TABELA NUTRICIONAL - EMPORIO NUTS
+     Onde: Pagina Marcas (botao "Tabela Nutricional" da marca Emporio Nuts)
+     Formato: PDF
+
+9.4  TABELA NUTRICIONAL - VIDA GOURMET
+     Onde: Pagina Marcas (botao "Tabela Nutricional" da marca Vida Gourmet)
+     Formato: PDF
+
+9.5  CATALOGO COMPLETO DE PRODUTOS
+     Onde: Pagina Marcas (botao "Baixar Catalogo Completo")
+     Formato: PDF
+     Observacoes: Catalogo com todos os produtos de todas as marcas
+
+
+================================================================================
+10. RESUMO QUANTITATIVO
+================================================================================
+
+  TIPO                        | QTD  | FORMATO         | PRIORIDADE
+  ----------------------------|------|-----------------|------------
+  Video institucional         |  1   | MP4 (H.264)     | ALTA
+  Video linha de producao     |  1   | MP4 (H.264)     | MEDIA
+  Fotos fabrica/estrutura     |  5   | JPG/WebP 16:9   | ALTA
+  Fotos industria (PL)        |  2   | JPG/WebP 4:3/16:9| MEDIA
+  Fotos ingredientes          |  4   | JPG/WebP 1:1    | ALTA
+  Fotos produtos por marca    |  4   | JPG/WebP 16:9   | ALTA
+  Logos das marcas            |  4   | SVG             | ALTA
+  Logos clientes/supermercados|  6   | SVG/PNG         | MEDIA
+  Selos/certificacoes         |  5   | SVG/PNG         | MEDIA
+  Tabelas nutricionais (PDF)  |  4   | PDF             | BAIXA
+  Catalogo completo (PDF)     |  1   | PDF             | BAIXA
+  ----------------------------|------|-----------------|------------
+  TOTAL                       | 37   |                 |
+
+================================================================================
+11. DIRETRIZES GERAIS DE QUALIDADE
+================================================================================
+
+  - RESOLUCAO: Fornecer sempre em 2x (Retina). Se a dimensao do site
+    e 1200px, fornecer 2400px de largura.
+
+  - PESO DOS ARQUIVOS:
+    * Fotos JPG/WebP: maximo 500KB cada (apos compressao)
+    * Videos MP4: maximo 15MB cada
+    * Logos SVG: maximo 50KB cada
+    * PDFs: maximo 5MB cada
+
+  - CORES: O site usa as seguintes cores de marca:
+    * Phytonatus (verde):      #3D5C3A
+    * Emporio do Mel (dourado): #C18A2A
+    * Emporio Nuts (vermelho):  #B83232
+    * Vida Gourmet (borgonha):  #8B2020
+
+  - ESTILO VISUAL: O site tem estetica "luxury natural" —
+    clean, premium, com foco em natureza e pureza.
+    Evitar fotos com filtros excessivos. Preferir iluminacao
+    natural, tons quentes, composicoes limpas.
+
+  - NOMENCLATURA DOS ARQUIVOS: Usar nomes descritivos em minusculo,
+    sem espacos (usar hifen). Exemplos:
+    * foto-fabrica-principal.jpg
+    * logo-phytonatus.svg
+    * selo-iso-9001.svg
+    * video-institucional.mp4
+    * tabela-nutricional-emporio-nuts.pdf
+
+================================================================================
+  Duvidas? Falar com o responsavel pelo desenvolvimento do site.
+================================================================================
