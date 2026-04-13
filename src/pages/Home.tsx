@@ -15,7 +15,6 @@ import {
   MERCADO_LIVRE_URL,
   SUPERMARKET_CLIENTS,
   QUALITY_SEALS,
-  imgIngredients,
 } from "@/lib/constants"
 
 export default function Home() {
