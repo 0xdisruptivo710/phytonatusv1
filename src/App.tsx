@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/sonner"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
 import { ScrollProgress } from "@/components/effects/ScrollProgress"
+import { BeeCursor } from "@/components/effects/BeeCursor"
 import { AppRouter } from "@/router"
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
         </main>
         <Footer />
       </div>
+      <BeeCursor />
       <Toaster position="bottom-right" />
     </BrowserRouter>
   )

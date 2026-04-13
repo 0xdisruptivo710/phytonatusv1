@@ -5,26 +5,57 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-display: "Fraunces", serif;
-  --font-body: "DM Sans", sans-serif;
+  /* ── Fonts ─────────────────────────────────────────────────────── */
+  --font-display: "Quicksand", sans-serif;
+  --font-body: "Lato", sans-serif;
 
-  --color-brand-bg: #F7F4EF;
+  /* ── Brand palette (from official Pantone references) ─────────── */
+  /* Verde Folha — Pantone 347 C */
+  --color-brand-bg: #F4F0E6;
+  /* Bege Principal — Pantone 7527 C, warm cream */
   --color-brand-surface: #FFFFFF;
-  --color-brand-text: #1C1C1A;
-  --color-brand-muted: #7A7873;
-  --color-brand-border: #E2DDD6;
-  --color-brand-warm: #FAF6F0;
-  --color-brand-cream: #F0EBE3;
-  --color-brand-dark: #2A2926;
+  --color-brand-text: #2D2114;
+  /* Dark brown text */
+  --color-brand-muted: #8A7B6B;
+  /* Medium brown muted */
+  --color-brand-border: #E0D8C8;
+  --color-brand-warm: #F0E8D8;
+  /* Bege Contraste lighter */
+  --color-brand-cream: #EDE6D5;
+  /* Bege Principal — Pantone 7527 C */
+  --color-brand-dark: #3B2F1E;
+  /* Marrom Cafe — Pantone 462 C */
 
-  --color-mel-accent: #C18A2A;
-  --color-mel-light: #F5E6C8;
-  --color-nuts-accent: #B83232;
-  --color-nuts-light: #F5D4D4;
-  --color-gourmet-accent: #8B2020;
+  /* ── Brand accent colors ─────────────────────────────────────── */
+  /* Emporio do Mel — Pantone 4625 C (Marrom Chocolate) */
+  --color-mel-accent: #5C3A21;
+  --color-mel-light: #E8D5C4;
+
+  /* Emporio Nuts — Pantone 485 C (Vermelho) */
+  --color-nuts-accent: #DA291C;
+  --color-nuts-light: #F5D4D0;
+
+  /* Vida Gourmet — Pantone 186 C (Vermelho escuro) */
+  --color-gourmet-accent: #C8102E;
   --color-gourmet-light: #F0D0D0;
-  --color-phyto-accent: #3D5C3A;
-  --color-phyto-light: #D4E5D2;
+
+  /* Phytonatus (marca mae) — Pantone 347 C / 5835 C */
+  --color-phyto-accent: #009B3A;
+  /* Verde Folha — Pantone 347 C */
+  --color-phyto-light: #BDD1A0;
+  /* Verde Claro — Pantone 7485 C */
+
+  /* Phytonatus Apicultor (honey sub-brand) */
+  --color-apicultor-brown: #4F2C1D;
+  /* Pantone 4625 C */
+  --color-apicultor-yellow: #F1BE48;
+  /* Pantone 7406 C */
+
+  /* Element palette extras */
+  --color-verde-claro: #86BE63;
+  /* Pantone 5835 C */
+  --color-bege-contraste: #DDCBA4;
+  /* Pantone 468 C */
 }
 
 /* ═══════════════════════════ GRAIN TEXTURE ═══════════════════════════ */
@@ -44,14 +75,14 @@
 
   /* ═══════════════════════════ TEXT GRADIENTS ═══════════════════════════ */
   .text-gradient-amber {
-    background: linear-gradient(135deg, #D4A03A 0%, #F0C75E 40%, #C18A2A 70%, #E5B85A 100%);
+    background: linear-gradient(135deg, #F1BE48 0%, #DDCBA4 40%, #5C3A21 70%, #F1BE48 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-green {
-    background: linear-gradient(135deg, #3D5C3A 0%, #5A8A56 50%, #3D5C3A 100%);
+    background: linear-gradient(135deg, #009B3A 0%, #86BE63 50%, #009B3A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -74,11 +105,11 @@
 
   /* ═══════════════════════════ GLOW EFFECTS ═══════════════════════════ */
   .glow-accent {
-    box-shadow: 0 0 20px rgba(61, 92, 58, 0.15), 0 0 60px rgba(61, 92, 58, 0.05);
+    box-shadow: 0 0 20px rgba(0, 155, 58, 0.15), 0 0 60px rgba(0, 155, 58, 0.05);
   }
 
   .glow-accent-strong {
-    box-shadow: 0 0 30px rgba(61, 92, 58, 0.25), 0 0 80px rgba(61, 92, 58, 0.1);
+    box-shadow: 0 0 30px rgba(0, 155, 58, 0.25), 0 0 80px rgba(0, 155, 58, 0.1);
   }
 
   /* ═══════════════════════════ SHIMMER ═══════════════════════════ */
@@ -157,8 +188,8 @@
 }
 
 @keyframes glow-pulse {
-  0%, 100% { opacity: 0.4; box-shadow: 0 0 20px rgba(61, 92, 58, 0.1); }
-  50% { opacity: 0.8; box-shadow: 0 0 40px rgba(61, 92, 58, 0.25); }
+  0%, 100% { opacity: 0.4; box-shadow: 0 0 20px rgba(0, 155, 58, 0.1); }
+  50% { opacity: 0.8; box-shadow: 0 0 40px rgba(0, 155, 58, 0.25); }
 }
 
 @keyframes particle-drift {
@@ -194,6 +225,18 @@
   animation: glow-pulse 3s ease-in-out infinite;
 }
 
+/* ═══════════════════════════ BEE CURSOR ═══════════════════════════ */
+.bee-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 28px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+}
+
 /* ═══════════════════════════ BASE STYLES ═══════════════════════════ */
 @layer base {
   * {
@@ -203,6 +246,7 @@
     background-color: var(--color-brand-bg);
     color: var(--color-brand-text);
     font-family: var(--font-body);
+    font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
@@ -211,18 +255,18 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
   }
 
   ::selection {
-    background-color: #3D5C3A;
+    background-color: #009B3A;
     color: white;
   }
 }
 
 @theme inline {
-  --font-sans: "DM Sans", sans-serif;
-  --font-heading: "Fraunces", serif;
+  --font-sans: "Lato", sans-serif;
+  --font-heading: "Quicksand", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -249,23 +293,23 @@
 }
 
 :root {
-  --background: #F7F4EF;
-  --foreground: #1C1C1A;
+  --background: #F4F0E6;
+  --foreground: #2D2114;
   --card: #FFFFFF;
-  --card-foreground: #1C1C1A;
+  --card-foreground: #2D2114;
   --popover: #FFFFFF;
-  --popover-foreground: #1C1C1A;
-  --primary: #3D5C3A;
+  --popover-foreground: #2D2114;
+  --primary: #009B3A;
   --primary-foreground: #FFFFFF;
-  --secondary: #F0EBE3;
-  --secondary-foreground: #1C1C1A;
-  --muted: #F0EBE3;
-  --muted-foreground: #7A7873;
-  --accent: #F0EBE3;
-  --accent-foreground: #1C1C1A;
-  --destructive: #B83232;
-  --border: #E2DDD6;
-  --input: #E2DDD6;
-  --ring: #3D5C3A;
+  --secondary: #EDE6D5;
+  --secondary-foreground: #2D2114;
+  --muted: #EDE6D5;
+  --muted-foreground: #8A7B6B;
+  --accent: #EDE6D5;
+  --accent-foreground: #2D2114;
+  --destructive: #DA291C;
+  --border: #E0D8C8;
+  --input: #E0D8C8;
+  --ring: #009B3A;
   --radius: 0.625rem;
 }

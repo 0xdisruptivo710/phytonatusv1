@@ -2,13 +2,12 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Factory, CheckCircle, Package, Leaf, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { PlaceholderImage } from "@/components/sections/PlaceholderImage"
 import { QualitySeals } from "@/components/sections/QualitySeals"
 import { PrivateLabelClients } from "@/components/sections/PrivateLabelClients"
 import { AnimatedHoneycomb } from "@/components/effects/AnimatedHoneycomb"
 import { ParticleField } from "@/components/effects/ParticleField"
 import { fadeUp, fadeUpLarge, staggerItem, pageTransition } from "@/lib/animations"
-import { QUALITY_SEALS, SUPERMARKET_CLIENTS } from "@/lib/constants"
+import { QUALITY_SEALS, SUPERMARKET_CLIENTS, imgProduction, imgWarehouse, imgQuality } from "@/lib/constants"
 
 const capabilities = [
   {
@@ -137,7 +136,7 @@ export default function PrivateLabel() {
             </h2>
           </motion.div>
 
-          {/* Overlapping editorial grid */}
+          {/* Editorial grid with real images */}
           <div className="grid gap-4 md:grid-cols-12 md:gap-6">
             {/* Large left image */}
             <motion.div
@@ -148,15 +147,14 @@ export default function PrivateLabel() {
               className="group relative md:col-span-7 md:row-span-2"
             >
               <div className="relative overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.01]">
-                <PlaceholderImage
-                  label="Foto da indústria 1"
-                  aspectRatio="aspect-[4/3]"
-                  className="transition-all duration-700 group-hover:brightness-110"
+                <img
+                  src={imgProduction}
+                  alt="Linha de producao"
+                  className="w-full h-full object-cover aspect-[4/3] transition-all duration-700 group-hover:brightness-110"
+                  loading="lazy"
                 />
-                {/* Hover overlay */}
                 <div className="absolute inset-0 rounded-2xl border-2 border-transparent transition-colors duration-500 group-hover:border-phyto-accent/20" />
               </div>
-              {/* Decorative blob */}
               <div
                 className="absolute -bottom-6 -left-6 -z-10 size-32 rounded-full bg-phyto-accent/10 blur-2xl"
                 aria-hidden="true"
@@ -172,15 +170,17 @@ export default function PrivateLabel() {
               className="group relative md:col-span-5"
             >
               <div className="relative overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]">
-                <PlaceholderImage
-                  label="Foto da indústria 2"
-                  className="transition-all duration-700 group-hover:brightness-110"
+                <img
+                  src={imgQuality}
+                  alt="Controle de qualidade"
+                  className="w-full h-auto object-cover aspect-video transition-all duration-700 group-hover:brightness-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 rounded-2xl border-2 border-transparent transition-colors duration-500 group-hover:border-phyto-accent/20" />
               </div>
             </motion.div>
 
-            {/* Bottom right — video / wide image (overlaps upward slightly) */}
+            {/* Bottom right */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -189,13 +189,14 @@ export default function PrivateLabel() {
               className="group relative md:col-span-5 md:-mt-8"
             >
               <div className="relative overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]">
-                <PlaceholderImage
-                  label="Vídeo da linha de produção"
-                  className="transition-all duration-700 group-hover:brightness-110"
+                <img
+                  src={imgWarehouse}
+                  alt="Estoque e logistica"
+                  className="w-full h-auto object-cover aspect-video transition-all duration-700 group-hover:brightness-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 rounded-2xl border-2 border-transparent transition-colors duration-500 group-hover:border-phyto-accent/20" />
               </div>
-              {/* Decorative blob */}
               <div
                 className="absolute -right-8 -top-8 -z-10 size-40 rounded-full bg-phyto-accent/10 blur-2xl"
                 aria-hidden="true"

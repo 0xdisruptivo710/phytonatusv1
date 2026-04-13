@@ -6,7 +6,7 @@ import { BrandSlice } from "@/components/sections/BrandSlice"
 import { AnimatedHoneycomb } from "@/components/effects/AnimatedHoneycomb"
 import { ParticleField } from "@/components/effects/ParticleField"
 import { fadeUp, fadeUpLarge, pageTransition } from "@/lib/animations"
-import { BRANDS, CATALOG_PDF_URL, LOJA_URL } from "@/lib/constants"
+import { BRANDS, CATALOG_PDF_URL, NUTRITION_ALL_PDF_URL, LOJA_URL } from "@/lib/constants"
 
 export default function Marcas() {
   return (
@@ -35,7 +35,7 @@ export default function Marcas() {
 
       {/* Brand slices */}
       {BRANDS.map((brand, i) => (
-        <div key={brand.id}>
+        <div key={brand.id} id={brand.id}>
           {i > 0 && (
             <div className="mx-auto max-w-7xl px-6">
               <Separator />
@@ -48,16 +48,15 @@ export default function Marcas() {
             description={brand.description}
             categoryBadge={brand.category}
             accentColor={brand.accentColor}
-            imagePlaceholder={`Foto ${brand.name}`}
+            image={brand.image}
             nutritionPdfUrl={brand.nutritionPdfUrl}
+            storeUrl={brand.storeUrl}
             reversed={i % 2 !== 0}
           />
         </div>
       ))}
 
-      {/* TODO: Mel Origens — adicionar fatia quando marca for lançada (dez/jan) */}
-
-      {/* Footer da página */}
+      {/* Footer da pagina */}
       <section className="bg-brand-surface py-16">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <motion.div {...fadeUp} className="flex flex-wrap justify-center gap-4">
@@ -65,6 +64,12 @@ export default function Marcas() {
               <Button size="lg" className="gap-2 bg-phyto-accent hover:bg-phyto-accent/90">
                 <Download className="size-4" />
                 Baixar Catalogo Completo (PDF)
+              </Button>
+            </a>
+            <a href={NUTRITION_ALL_PDF_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="gap-2">
+                <Download className="size-4" />
+                Tabelas Nutricionais (PDF)
               </Button>
             </a>
             <a href={LOJA_URL} target="_blank" rel="noopener noreferrer">

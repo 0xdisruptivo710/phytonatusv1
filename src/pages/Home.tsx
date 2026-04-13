@@ -1,42 +1,22 @@
 import { Link } from "react-router-dom"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import { ExternalLink, Play, ArrowRight, Leaf, Droplets, Factory, ShieldCheck, Users } from "lucide-react"
+import { ExternalLink, ArrowRight, Leaf, Droplets, Factory, ShieldCheck, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { PlaceholderImage } from "@/components/sections/PlaceholderImage"
 import { ParticleField } from "@/components/effects/ParticleField"
 import { TextReveal } from "@/components/effects/TextReveal"
 import { GlassCard } from "@/components/effects/GlassCard"
-import { TiltCard } from "@/components/effects/TiltCard"
 import { AnimatedHoneycomb } from "@/components/effects/AnimatedHoneycomb"
 import { fadeUp, fadeUpLarge, staggerItem, pageTransition } from "@/lib/animations"
-import { BRANDS, LOJA_URL, AMAZON_URL, MERCADO_LIVRE_URL, SUPERMARKET_CLIENTS } from "@/lib/constants"
-
-const ingredients = [
-  { name: "Mel", placeholder: "Textura de mel", color: "#C18A2A", icon: "\u{1F36F}" },
-  { name: "Cacau em Po", placeholder: "Textura de cacau", color: "#5C3A1E", icon: "\u{1FAD8}" },
-  { name: "Coco", placeholder: "Textura de coco", color: "#8B7355", icon: "\u{1F965}" },
-  { name: "Sal Rosa", placeholder: "Textura de sal rosa", color: "#C4756E", icon: "\u{1F9C2}" },
-]
-
-function AnimatedCounter({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="text-center">
-      <motion.span
-        className="block font-display text-5xl font-bold text-mel-accent md:text-6xl"
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-      >
-        {value}
-      </motion.span>
-      <span className="mt-2 block text-sm font-medium uppercase tracking-widest text-brand-muted">
-        {label}
-      </span>
-    </div>
-  )
-}
+import {
+  BRANDS,
+  LOJA_URL,
+  AMAZON_URL,
+  MERCADO_LIVRE_URL,
+  SUPERMARKET_CLIENTS,
+  QUALITY_SEALS,
+  imgIngredients,
+} from "@/lib/constants"
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null)
@@ -161,83 +141,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════ BRAND MARQUEE ═══════════════════════════════════ */}
-      <section className="overflow-hidden py-12 md:py-16" aria-label="Nossas marcas">
+      {/* ═══════════════════════════════ CERTIFICACOES MARQUEE ═══════════════════════════════ */}
+      <section className="overflow-hidden py-12 md:py-16" aria-label="Certificacoes">
         <div className="relative space-y-4">
           <div className="flex whitespace-nowrap animate-marquee">
-            {[...BRANDS, ...BRANDS, ...BRANDS, ...BRANDS].map((brand, i) => (
-              <span key={`a-${brand.id}-${i}`} className="mx-8 inline-flex items-center gap-3 text-3xl md:text-4xl">
-                <span className="inline-block size-3 rounded-full animate-glow-pulse" style={{ backgroundColor: brand.accentColor }} aria-hidden="true" />
-                <span className="font-display font-bold text-brand-text/15">{brand.name}</span>
+            {[...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS].map((seal, i) => (
+              <span key={`a-${seal.name}-${i}`} className="mx-8 inline-flex items-center gap-3 text-3xl md:text-4xl">
+                <span className="inline-block size-3 rounded-full bg-phyto-accent animate-glow-pulse" aria-hidden="true" />
+                <span className="font-display font-bold text-brand-text/15">{seal.name}</span>
               </span>
             ))}
           </div>
           <div className="flex whitespace-nowrap animate-marquee-reverse">
-            {[...BRANDS, ...BRANDS, ...BRANDS, ...BRANDS].map((brand, i) => (
-              <span key={`b-${brand.id}-${i}`} className="mx-8 inline-flex items-center gap-3 text-xl md:text-2xl">
-                <span className="inline-block size-2 rounded-full" style={{ backgroundColor: brand.accentColor, opacity: 0.3 }} aria-hidden="true" />
-                <span className="font-display font-semibold text-brand-text/8 italic">{brand.tagline}</span>
+            {[...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS].map((seal, i) => (
+              <span key={`b-${seal.name}-${i}`} className="mx-8 inline-flex items-center gap-3 text-xl md:text-2xl">
+                <span className="inline-block size-2 rounded-full bg-phyto-accent/30" aria-hidden="true" />
+                <span className="font-display font-semibold text-brand-text/8 italic">{seal.name}</span>
               </span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════ INGREDIENTES ═══════════════════════════════ */}
-      <section className="relative py-28 md:py-36">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid items-center gap-16 lg:grid-cols-2">
-            <motion.div {...fadeUpLarge}>
-              <span className="text-sm font-medium uppercase tracking-widest text-phyto-accent">Materias-primas</span>
-              <h2 className="mt-4 text-balance font-display text-5xl font-bold leading-tight md:text-6xl lg:text-7xl">
-                Ingredientes puros.
-                <br />
-                <span className="text-brand-muted">Rotulo limpo.</span>
-              </h2>
-              <p className="mt-6 max-w-md text-pretty text-lg leading-relaxed text-brand-muted">
-                Trabalhamos com materias-primas de origem controlada.
-                Sem conservantes, sem aditivos artificiais — apenas o
-                ingrediente em sua forma mais pura.
-              </p>
-              <div className="mt-8 flex items-center gap-4">
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-phyto-accent/30 to-transparent" />
-                <Droplets className="size-5 text-phyto-accent animate-float" aria-hidden="true" />
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-phyto-accent/30 to-transparent" />
-              </div>
-            </motion.div>
-
-            <div className="grid grid-cols-2 gap-4">
-              {ingredients.map((item, i) => (
-                <TiltCard key={item.name} className="group" tiltDegree={6} glareColor={`${item.color}15`}>
-                  <motion.div
-                    initial={{ opacity: 0, y: 30, rotate: i % 2 === 0 ? -2 : 2 }}
-                    whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.12, duration: 0.5 }}
-                    className="relative overflow-hidden rounded-2xl border border-brand-border bg-brand-surface transition-shadow duration-500 hover:shadow-xl"
-                  >
-                    <div className="aspect-square">
-                      <PlaceholderImage label={item.placeholder} aspectRatio="aspect-square" className="rounded-none border-0" />
-                    </div>
-                    <div
-                      className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                      style={{ background: `linear-gradient(to top, ${item.color}30, transparent 60%)` }}
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <div className="flex items-center gap-2">
-                        <span className="text-2xl drop-shadow-lg" aria-hidden="true">{item.icon}</span>
-                        <span className="font-display text-lg font-bold">{item.name}</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                </TiltCard>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════ MARCAS SHOWCASE ═══════════════════════════════ */}
+      {/* ═══════════════════════════════ MARCAS SHOWCASE (FIRST) ═══════════════════════════════ */}
       <section className="relative overflow-hidden bg-brand-dark py-32 md:py-40 grain">
         <AnimatedHoneycomb id="brands-honeycomb" />
         <ParticleField count={15} color="rgba(61, 92, 58, 0.15)" />
@@ -255,37 +181,37 @@ export default function Home() {
 
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {BRANDS.map((brand, i) => (
-              <GlassCard key={brand.id} glowColor={`${brand.accentColor}20`} className="p-0">
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.15, duration: 0.5 }}
-                  className="p-8"
-                >
-                  <div
-                    className="absolute -right-8 -top-8 size-32 rounded-full opacity-15 blur-2xl transition-opacity duration-500 group-hover:opacity-40"
-                    style={{ backgroundColor: brand.accentColor }}
-                    aria-hidden="true"
-                  />
-                  <div className="relative z-10">
-                    <motion.div
-                      whileHover={{ rotate: 6, scale: 1.08 }}
-                      className="mb-6 flex size-14 items-center justify-center rounded-xl text-white text-xl font-bold font-display shadow-lg"
-                      style={{ backgroundColor: brand.accentColor, boxShadow: `0 8px 24px ${brand.accentColor}30` }}
-                    >
-                      {brand.name.charAt(0)}
-                    </motion.div>
-                    <h3 className="font-display text-xl font-bold text-white">{brand.name}</h3>
-                    <p className="mt-1 text-sm font-medium" style={{ color: brand.accentColor }}>{brand.category}</p>
-                    <p className="mt-3 text-sm leading-relaxed text-white/40">{brand.tagline}</p>
-                    <div className="mt-6 flex items-center gap-2 text-sm font-medium text-white/30 transition-colors group-hover:text-white/60">
-                      <span className="link-underline">Ver mais</span>
-                      <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
+              <Link key={brand.id} to={`/marcas#${brand.id}`} className="no-underline">
+                <GlassCard glowColor={`${brand.accentColor}20`} className="p-0 h-full">
+                  <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.15, duration: 0.5 }}
+                    className="flex flex-col h-full"
+                  >
+                    {/* Full brand image */}
+                    <div className="relative overflow-hidden rounded-t-[inherit] aspect-[4/3]">
+                      <img
+                        src={brand.image}
+                        alt={`Produtos ${brand.name}`}
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     </div>
-                  </div>
-                </motion.div>
-              </GlassCard>
+                    <div className="relative z-10 p-6 flex-1 flex flex-col">
+                      <h3 className="font-display text-xl font-bold text-white">{brand.name}</h3>
+                      <p className="mt-1 text-sm font-medium" style={{ color: brand.accentColor }}>{brand.category}</p>
+                      <p className="mt-3 text-sm leading-relaxed text-white/40 flex-1">{brand.tagline}</p>
+                      <div className="mt-4 flex items-center gap-2 text-sm font-medium text-white/30 transition-colors group-hover:text-white/60">
+                        <span className="link-underline">Ver mais</span>
+                        <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
+                      </div>
+                    </div>
+                  </motion.div>
+                </GlassCard>
+              </Link>
             ))}
           </div>
 
@@ -300,21 +226,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════ METRICAS ═══════════════════════════════ */}
-      <section className="relative py-28 md:py-36">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-phyto-light/20 to-transparent" aria-hidden="true" />
-        <div className="relative z-10 mx-auto max-w-5xl px-6">
-          <motion.div {...fadeUp} className="mb-16 text-center">
-            <span className="text-sm font-medium uppercase tracking-widest text-phyto-accent">Numeros</span>
-            <h2 className="mt-4 text-balance font-display text-4xl font-bold md:text-5xl">
-              Dados que <span className="text-gradient-green">falam por nos</span>
-            </h2>
-          </motion.div>
-          <div className="grid grid-cols-2 gap-12 md:grid-cols-4">
-            <AnimatedCounter value="10+" label="Anos de mercado" />
-            <AnimatedCounter value="50+" label="Produtos ativos" />
-            <AnimatedCounter value="200+" label="Clientes B2B" />
-            <AnimatedCounter value="1000+" label="Tons / mes" />
+      {/* ═══════════════════════════════ INGREDIENTES (compact) ═══════════════════════════════ */}
+      <section className="relative py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid items-center gap-12 lg:grid-cols-5">
+            <motion.div {...fadeUpLarge} className="lg:col-span-2">
+              <span className="text-sm font-medium uppercase tracking-widest text-phyto-accent">Nossas marcas</span>
+              <h2 className="mt-4 text-balance font-display text-4xl font-bold leading-tight md:text-5xl">
+                Ingredientes puros.
+                <br />
+                <span className="text-brand-muted">Rotulo limpo.</span>
+              </h2>
+              <p className="mt-4 max-w-md text-pretty text-base leading-relaxed text-brand-muted">
+                Trabalhamos com materias-primas de origem controlada.
+                Sem conservantes, sem aditivos artificiais — apenas o
+                ingrediente em sua forma mais pura.
+              </p>
+              <div className="mt-6 flex items-center gap-4">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-phyto-accent/30 to-transparent" />
+                <Droplets className="size-5 text-phyto-accent animate-float" aria-hidden="true" />
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-phyto-accent/30 to-transparent" />
+              </div>
+            </motion.div>
+
+            <motion.div
+              {...fadeUp}
+              transition={{ delay: 0.15 }}
+              className="lg:col-span-3"
+            >
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                {BRANDS.map((brand, i) => (
+                  <motion.div
+                    key={brand.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1, duration: 0.4 }}
+                    className="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-surface shadow-sm transition-all duration-300 hover:shadow-lg hover:border-phyto-accent/30"
+                  >
+                    <div className="aspect-square overflow-hidden">
+                      <img
+                        src={brand.image}
+                        alt={brand.name}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-3 text-center">
+                      <span className="font-display text-sm font-bold">{brand.name}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -334,9 +298,9 @@ export default function Home() {
               <p className="mt-6 max-w-md text-pretty text-lg leading-relaxed text-brand-muted">
                 Infraestrutura completa para criacao e producao de marcas proprias de produtos naturais.
               </p>
-              <Link to="/contato?dest=comercial" className="mt-8 inline-block">
+              <Link to="/private-label" className="mt-8 inline-block">
                 <Button size="lg" className="shimmer gap-2 bg-phyto-accent text-brand-dark hover:bg-phyto-accent/90 px-8 shadow-lg shadow-phyto-accent/20 transition-shadow hover:shadow-xl hover:shadow-phyto-accent/30">
-                  Falar com o comercial
+                  Saiba mais
                   <ArrowRight className="size-4" />
                 </Button>
               </Link>
@@ -347,7 +311,6 @@ export default function Home() {
                 { icon: Factory, title: "Capacidade Produtiva", desc: "Linhas automatizadas para grandes volumes com qualidade constante." },
                 { icon: ShieldCheck, title: "Certificacoes", desc: "Processos certificados e auditados com rastreabilidade total." },
                 { icon: Users, title: "Clientes Consolidados", desc: "Parceiros no varejo nacional que confiam na nossa entrega." },
-                { icon: Leaf, title: "Rotulo Limpo", desc: "Formulacoes com ingrediente unico, sem aditivos artificiais." },
               ].map((pillar, i) => (
                 <motion.div
                   key={pillar.title}
@@ -369,43 +332,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════ ONDE ENCONTRAR ═══════════════════════════════ */}
-      <section className="py-28 md:py-36">
+      {/* ═══════════════════════════════ CLIENTES (horizontal scroll) ═══════════════════════════════ */}
+      <section className="py-28 md:py-36 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6">
           <motion.div {...fadeUpLarge} className="text-center">
             <span className="text-sm font-medium uppercase tracking-widest text-phyto-accent">Distribuicao</span>
-            <h2 className="mt-4 text-balance font-display text-5xl font-bold md:text-6xl">Onde Encontrar</h2>
+            <h2 className="mt-4 text-balance font-display text-5xl font-bold md:text-6xl">Clientes</h2>
           </motion.div>
-          <div className="mt-12 flex flex-wrap justify-center gap-4">
-            {SUPERMARKET_CLIENTS.slice(0, 4).map((client, i) => (
-              <motion.div
-                key={client.name}
-                {...staggerItem}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group flex h-20 w-40 items-center justify-center rounded-xl border border-brand-border bg-brand-surface text-sm font-medium text-brand-muted transition-all duration-300 hover:border-phyto-accent/30 hover:shadow-lg hover:shadow-phyto-accent/5"
+        </div>
+
+        {/* Infinite horizontal scroll */}
+        <div className="relative mt-12">
+          <div className="absolute left-0 top-0 bottom-0 z-10 w-24 bg-gradient-to-r from-brand-bg to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 z-10 w-24 bg-gradient-to-l from-brand-bg to-transparent pointer-events-none" />
+          <div className="flex whitespace-nowrap animate-marquee">
+            {[...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS].map((client, i) => (
+              <div
+                key={`client-${client.name}-${i}`}
+                className="mx-4 flex h-20 w-44 shrink-0 items-center justify-center rounded-xl border border-brand-border bg-brand-surface text-sm font-semibold text-brand-muted transition-all duration-300 hover:border-phyto-accent/30 hover:shadow-lg hover:shadow-phyto-accent/5"
               >
                 {client.imagePlaceholder}
-              </motion.div>
+              </div>
             ))}
           </div>
+        </div>
+
+        {/* Compre online - dynamic cards */}
+        <div className="mx-auto max-w-7xl px-6">
           <motion.div {...fadeUp} className="mt-16">
-            <div className="mx-auto max-w-2xl rounded-2xl border border-brand-border bg-brand-surface p-8 shadow-sm">
-              <p className="mb-6 text-center font-display text-lg font-bold">Compre tambem online</p>
-              <div className="flex flex-wrap justify-center gap-3">
-                {[
-                  { label: "Loja Phytonatus", url: LOJA_URL },
-                  { label: "Amazon", url: AMAZON_URL },
-                  { label: "Mercado Livre", url: MERCADO_LIVRE_URL },
-                ].map((channel) => (
-                  <a key={channel.label} href={channel.url} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" className="gap-1.5 hover:border-phyto-accent/30 transition-all duration-300 hover:shadow-sm">
-                      {channel.label}
-                      <ExternalLink className="size-3.5" />
-                    </Button>
-                  </a>
-                ))}
-              </div>
+            <p className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-phyto-accent">
+              Compre tambem online
+            </p>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {[
+                { label: "Loja Phytonatus", url: LOJA_URL, desc: "Nossa loja oficial com todos os produtos" },
+                { label: "Amazon", url: AMAZON_URL, desc: "Compre com entrega rapida pela Amazon" },
+                { label: "Mercado Livre", url: MERCADO_LIVRE_URL, desc: "Encontre nossos produtos no Mercado Livre" },
+              ].map((channel, i) => (
+                <motion.a
+                  key={channel.label}
+                  href={channel.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="group block no-underline"
+                >
+                  <div className="relative overflow-hidden rounded-2xl border border-brand-border bg-brand-surface p-6 text-center transition-all duration-300 hover:border-phyto-accent/30 hover:shadow-xl hover:shadow-phyto-accent/5">
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -top-20 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-phyto-accent/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
+                    />
+                    <div className="relative z-10">
+                      <h3 className="font-display text-lg font-bold transition-colors duration-300 group-hover:text-phyto-accent">
+                        {channel.label}
+                      </h3>
+                      <p className="mt-2 text-sm text-brand-muted">{channel.desc}</p>
+                      <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-phyto-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        Acessar <ExternalLink className="size-3.5" />
+                      </div>
+                    </div>
+                  </div>
+                </motion.a>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -414,20 +405,18 @@ export default function Home() {
       {/* ═══════════════════════════════ VIDEO CTA ═══════════════════════════════ */}
       <section className="relative overflow-hidden bg-brand-dark py-32 md:py-40 grain">
         <AnimatedHoneycomb id="video-honeycomb" />
-        <ParticleField count={20} color="rgba(61, 92, 58, 0.12)" />
+        <ParticleField count={20} color="rgba(0, 155, 58, 0.12)" />
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <motion.div {...fadeUpLarge}>
-            <div className="group relative mx-auto aspect-video max-w-3xl cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 hover:border-phyto-accent/20 hover:shadow-2xl hover:shadow-phyto-accent/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-phyto-accent/5 via-transparent to-phyto-accent/5" aria-hidden="true" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-5">
-                <motion.div
-                  whileHover={{ scale: 1.15 }}
-                  className="flex size-20 items-center justify-center rounded-full bg-phyto-accent shadow-xl shadow-phyto-accent/30 transition-shadow duration-300 group-hover:shadow-2xl group-hover:shadow-phyto-accent/40"
-                >
-                  <Play className="size-8 fill-white text-white ml-1" />
-                </motion.div>
-                <span className="text-sm font-medium uppercase tracking-widest text-white/40">Video institucional</span>
-              </div>
+            <div className="relative mx-auto aspect-video max-w-3xl overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-phyto-accent/10">
+              <iframe
+                src="https://www.youtube.com/embed/VTp5H6-_1cA?rel=0&modestbranding=1"
+                title="Video Institucional Phytonatus"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+                loading="lazy"
+              />
             </div>
             <p className="mt-10 font-display text-2xl font-bold text-white/60 italic md:text-3xl">
               "Conheca quem esta por tras de cada produto natural que chega a sua mesa."

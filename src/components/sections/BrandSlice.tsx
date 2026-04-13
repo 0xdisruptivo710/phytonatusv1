@@ -1,8 +1,7 @@
 import { motion } from "framer-motion"
-import { Download } from "lucide-react"
+import { Download, ExternalLink } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { PlaceholderImage } from "./PlaceholderImage"
 import { TiltCard } from "@/components/effects/TiltCard"
 import { fadeUp } from "@/lib/animations"
 
@@ -13,8 +12,9 @@ interface BrandSliceProps {
   description: string
   categoryBadge: string
   accentColor: string
-  imagePlaceholder: string
+  image: string
   nutritionPdfUrl: string
+  storeUrl: string
   reversed?: boolean
 }
 
@@ -24,8 +24,9 @@ export function BrandSlice({
   description,
   categoryBadge,
   accentColor,
-  imagePlaceholder,
+  image,
   nutritionPdfUrl,
+  storeUrl,
   reversed = false,
 }: BrandSliceProps) {
   return (
@@ -77,6 +78,12 @@ export function BrandSlice({
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
+              <a href={storeUrl} target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="gap-1.5 rounded-full" style={{ backgroundColor: accentColor }}>
+                  <ExternalLink className="size-3.5" />
+                  Visitar loja
+                </Button>
+              </a>
               <a href={nutritionPdfUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="gap-1.5 rounded-full">
                   <Download className="size-3.5" />
@@ -91,7 +98,12 @@ export function BrandSlice({
             <TiltCard tiltDegree={5} glareColor={`${accentColor}10`}>
               <div className="absolute -inset-4 rounded-3xl opacity-10 blur-2xl" style={{ backgroundColor: accentColor }} aria-hidden="true" />
               <div className="relative overflow-hidden rounded-2xl border border-brand-border shadow-lg transition-shadow duration-500 hover:shadow-xl">
-                <PlaceholderImage label={imagePlaceholder} />
+                <img
+                  src={image}
+                  alt={`Produtos ${name}`}
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
               </div>
             </TiltCard>
           </motion.div>

@@ -16,7 +16,7 @@ const navItems = [
   { label: "Institucional", href: "/institucional" },
   { label: "Marcas", href: "/marcas" },
   { label: "Private Label", href: "/private-label" },
-  { label: "Onde Encontrar", href: "/onde-encontrar" },
+  { label: "Clientes", href: "/onde-encontrar" },
   { label: "Contato", href: "/contato" },
 ]
 

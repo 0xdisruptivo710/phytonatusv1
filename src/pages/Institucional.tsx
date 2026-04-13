@@ -1,52 +1,18 @@
 import { motion } from "framer-motion"
-import { Play } from "lucide-react"
-import { PlaceholderImage } from "@/components/sections/PlaceholderImage"
+
+
 import { QualitySeals } from "@/components/sections/QualitySeals"
 import { AnimatedHoneycomb } from "@/components/effects/AnimatedHoneycomb"
 import { ParticleField } from "@/components/effects/ParticleField"
 import { fadeUp, pageTransition } from "@/lib/animations"
-import { QUALITY_SEALS } from "@/lib/constants"
-
-const metrics = [
-  { value: "10+", label: "Anos de mercado" },
-  { value: "50+", label: "Produtos ativos" },
-  { value: "200+", label: "Clientes B2B" },
-  { value: "1000+", label: "Tons/mes de capacidade" },
-]
+import { QUALITY_SEALS, imgWarehouse, imgProduction, imgQuality, imgAllProducts } from "@/lib/constants"
 
 const galleryItems = [
-  { label: "Area de producao", rotate: -2 },
-  { label: "Linha de envase", rotate: 1.5 },
-  { label: "Laboratorio de qualidade", rotate: -1 },
-  { label: "Estoque e logistica", rotate: 2 },
+  { label: "Area de producao", image: imgProduction },
+  { label: "Controle de qualidade", image: imgQuality },
+  { label: "Estoque e logistica", image: imgWarehouse },
+  { label: "Nossos produtos", image: imgAllProducts },
 ]
-
-function AnimatedCounter({
-  value,
-  label,
-  delay = 0,
-}: {
-  value: string
-  label: string
-  delay?: number
-}) {
-  return (
-    <div className="text-center">
-      <motion.span
-        className="block font-display text-5xl font-bold text-phyto-accent md:text-6xl"
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] }}
-      >
-        {value}
-      </motion.span>
-      <span className="mt-3 block text-xs font-medium uppercase tracking-widest text-brand-muted">
-        {label}
-      </span>
-    </div>
-  )
-}
 
 export default function Institucional() {
   return (
@@ -56,7 +22,6 @@ export default function Institucional() {
         <AnimatedHoneycomb id="inst-honeycomb" />
         <ParticleField count={25} />
 
-        {/* Ambient glows */}
         <div
           className="absolute -left-40 -top-40 size-[500px] rounded-full bg-phyto-accent/8 blur-3xl animate-pulse-soft"
           aria-hidden="true"
@@ -68,7 +33,6 @@ export default function Institucional() {
         />
 
         <div className="relative z-10 mx-auto flex min-h-[80vh] max-w-7xl flex-col items-center justify-center px-6 text-center">
-          {/* Eyebrow */}
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -98,7 +62,6 @@ export default function Institucional() {
             produzimos.
           </motion.p>
 
-          {/* Scroll indicator */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -118,7 +81,6 @@ export default function Institucional() {
           </motion.div>
         </div>
 
-        {/* Bottom wave */}
         <div
           className="absolute bottom-0 left-0 right-0 z-20"
           aria-hidden="true"
@@ -138,7 +100,6 @@ export default function Institucional() {
 
       {/* ═══════════════════════════════ HISTORIA ═══════════════════════════════ */}
       <section className="relative py-28 md:py-36">
-        {/* Decorative accent line */}
         <div
           className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-phyto-accent/30 to-transparent"
           aria-hidden="true"
@@ -146,7 +107,6 @@ export default function Institucional() {
 
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid items-center gap-16 lg:grid-cols-12">
-            {/* Left: asymmetric editorial text */}
             <motion.div {...fadeUp} className="lg:col-span-7">
               <span className="text-xs font-medium uppercase tracking-widest text-phyto-accent">
                 Nossa Historia
@@ -159,7 +119,6 @@ export default function Institucional() {
               </h2>
 
               <div className="mt-8 flex items-start gap-6">
-                {/* Decorative vertical bar */}
                 <div
                   className="mt-2 hidden w-px shrink-0 self-stretch bg-gradient-to-b from-phyto-accent/60 to-transparent md:block"
                   aria-hidden="true"
@@ -181,7 +140,6 @@ export default function Institucional() {
                 </div>
               </div>
 
-              {/* Tagline */}
               <motion.p
                 {...fadeUp}
                 transition={{ delay: 0.3 }}
@@ -191,20 +149,22 @@ export default function Institucional() {
               </motion.p>
             </motion.div>
 
-            {/* Right: photo */}
             <motion.div
               {...fadeUp}
               transition={{ delay: 0.15 }}
               className="lg:col-span-5"
             >
               <div className="relative">
-                {/* Decorative frame offset */}
                 <div
                   className="absolute -right-3 -bottom-3 h-full w-full rounded-2xl border-2 border-phyto-accent/20"
                   aria-hidden="true"
                 />
                 <div className="relative overflow-hidden rounded-2xl">
-                  <PlaceholderImage label="Foto fabrica / equipe" />
+                  <img
+                    src={imgQuality}
+                    alt="Controle de qualidade na fabrica Phytonatus"
+                    className="w-full h-auto object-cover aspect-[3/4]"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -212,7 +172,7 @@ export default function Institucional() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════ GALERIA FABRICA ═══════════════════════════════ */}
+      {/* ═══════════════════════════════ GALERIA FABRICA (cards retos) ═══════════════════════════════ */}
       <section className="relative overflow-hidden bg-brand-surface py-28 md:py-36">
         <div className="mx-auto max-w-7xl px-6">
           <motion.div {...fadeUp} className="text-center">
@@ -228,35 +188,26 @@ export default function Institucional() {
             </p>
           </motion.div>
 
-          {/* Overlapping gallery cards */}
+          {/* Straight gallery cards (no rotation) */}
           <div className="relative mt-16 grid gap-6 sm:grid-cols-2 lg:gap-8">
             {galleryItems.map((item, i) => (
               <motion.div
                 key={item.label}
-                initial={{
-                  opacity: 0,
-                  y: 40,
-                  rotate: item.rotate,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  rotate: item.rotate * 0.5,
-                }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.12, duration: 0.5 }}
-                whileHover={{
-                  rotate: 0,
-                  scale: 1.03,
-                  y: -8,
-                  zIndex: 10,
-                }}
+                whileHover={{ scale: 1.02, y: -4 }}
                 className="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-bg shadow-lg transition-shadow duration-300 hover:shadow-2xl"
-                style={{
-                  marginTop: i % 2 !== 0 ? "2rem" : "0",
-                }}
               >
-                <PlaceholderImage label={item.label} />
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.label}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
 
                 {/* Hover overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -283,7 +234,6 @@ export default function Institucional() {
         <AnimatedHoneycomb id="inst-video-honeycomb" />
         <ParticleField count={15} color="rgba(61, 92, 58, 0.12)" />
 
-        {/* Ambient glow */}
         <div
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-[600px] rounded-full bg-phyto-accent/5 blur-3xl"
           aria-hidden="true"
@@ -300,31 +250,17 @@ export default function Institucional() {
           </motion.div>
 
           <motion.div {...fadeUp} transition={{ delay: 0.2 }} className="mt-12">
-            {/* Cinematic video placeholder */}
-            <div className="group relative mx-auto aspect-video max-w-4xl cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-              {/* Subtle inner gradient */}
-              <div
-                className="absolute inset-0 bg-gradient-to-br from-phyto-accent/5 via-transparent to-phyto-accent/5"
-                aria-hidden="true"
+            <div className="relative mx-auto aspect-video max-w-4xl overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-phyto-accent/10">
+              <iframe
+                src="https://www.youtube.com/embed/VTp5H6-_1cA?rel=0&modestbranding=1"
+                title="Video Institucional Phytonatus"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+                loading="lazy"
               />
-
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-5">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className="flex size-20 items-center justify-center rounded-full bg-phyto-accent/90 shadow-lg shadow-phyto-accent/20 transition-shadow duration-300 group-hover:shadow-xl group-hover:shadow-phyto-accent/30"
-                >
-                  <Play className="ml-1 size-8 fill-white text-white" />
-                </motion.div>
-                <span className="text-sm font-medium uppercase tracking-widest text-white/50">
-                  Video institucional
-                </span>
-              </div>
-
-              {/* Subtle border glow on hover */}
-              <div className="absolute inset-0 rounded-2xl border border-phyto-accent/0 transition-colors duration-500 group-hover:border-phyto-accent/20" />
             </div>
 
-            {/* Quote underneath */}
             <motion.p
               {...fadeUp}
               transition={{ delay: 0.4 }}
@@ -339,7 +275,6 @@ export default function Institucional() {
 
       {/* ═══════════════════════════════ SELOS DE QUALIDADE ═══════════════════════════════ */}
       <section className="relative py-28 md:py-36">
-        {/* Subtle decorative elements */}
         <div
           className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-phyto-accent/20 to-transparent"
           aria-hidden="true"
@@ -359,70 +294,6 @@ export default function Institucional() {
             </p>
           </motion.div>
           <QualitySeals seals={QUALITY_SEALS} />
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════ METRICAS ═══════════════════════════════ */}
-      <section className="relative overflow-hidden bg-brand-surface py-28 md:py-36">
-        {/* Background honeycomb at very low opacity */}
-        <svg
-          className="absolute inset-0 size-full opacity-[0.02]"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <pattern
-              id="honeycomb-metrics"
-              x="0"
-              y="0"
-              width="56"
-              height="100"
-              patternUnits="userSpaceOnUse"
-              patternTransform="scale(1.5)"
-            >
-              <path
-                d="M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-              />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#honeycomb-metrics)" />
-        </svg>
-
-        <div className="relative z-10 mx-auto max-w-7xl px-6">
-          <motion.div {...fadeUp} className="mb-16 text-center">
-            <span className="text-xs font-medium uppercase tracking-widest text-phyto-accent">
-              Numeros
-            </span>
-            <h2 className="mt-4 text-balance font-display text-5xl font-bold md:text-6xl lg:text-7xl">
-              Dados que{" "}
-              <span className="text-gradient-green">falam por nos</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-2 gap-12 md:grid-cols-4 md:gap-8">
-            {metrics.map((metric, i) => (
-              <AnimatedCounter
-                key={metric.label}
-                value={metric.value}
-                label={metric.label}
-                delay={i * 0.15}
-              />
-            ))}
-          </div>
-
-          {/* Decorative divider */}
-          <motion.div
-            {...fadeUp}
-            transition={{ delay: 0.6 }}
-            className="mx-auto mt-16 flex max-w-xs items-center gap-4"
-          >
-            <div className="h-px flex-1 bg-brand-border" />
-            <div className="size-2 rotate-45 bg-phyto-accent/40" />
-            <div className="h-px flex-1 bg-brand-border" />
-          </motion.div>
         </div>
       </section>
     </motion.div>
