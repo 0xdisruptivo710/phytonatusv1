@@ -19,12 +19,12 @@ export function GlassCard({
   return (
     <motion.div
       whileHover={hoverGlow ? { y: -6 } : undefined}
-      className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-md ${className}`}
+      className={`group relative overflow-hidden rounded-xl border border-white/8 bg-white/[0.03] backdrop-blur-md ${className}`}
       style={style}
     >
       {hoverGlow && (
         <div
-          className="pointer-events-none absolute -inset-1 rounded-2xl opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100"
+          className="pointer-events-none absolute -inset-1 rounded-xl opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100"
           style={{ backgroundColor: glowColor }}
           aria-hidden="true"
         />

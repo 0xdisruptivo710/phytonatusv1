@@ -110,7 +110,7 @@ export default function Contato() {
           <motion.form
             {...fadeUp}
             onSubmit={handleSubmit(onSubmit)}
-            className="relative overflow-hidden rounded-2xl border border-brand-border bg-white/80 backdrop-blur-xl shadow-xl shadow-brand-dark/5"
+            className="relative overflow-hidden rounded-xl bg-white/80 backdrop-blur-xl shadow-lg shadow-brand-dark/5"
           >
             {/* Decorative left accent line */}
             <div

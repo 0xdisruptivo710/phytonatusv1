@@ -190,7 +190,7 @@ export default function Home() {
                     className="flex flex-col h-full"
                   >
                     {/* Full brand image */}
-                    <div className="relative overflow-hidden rounded-t-[inherit] aspect-[4/3]">
+                    <div className="relative overflow-hidden rounded-t-[inherit] aspect-[3/4]">
                       <img
                         src={brand.image}
                         alt={`Produtos ${brand.name}`}
@@ -261,9 +261,9 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1, duration: 0.4 }}
-                    className="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-surface shadow-sm transition-all duration-300 hover:shadow-lg hover:border-phyto-accent/30"
+                    className="group relative overflow-hidden rounded-lg bg-brand-surface shadow-sm transition-all duration-300 hover:shadow-md"
                   >
-                    <div className="aspect-square overflow-hidden">
+                    <div className="aspect-[4/5] overflow-hidden">
                       <img
                         src={brand.image}
                         alt={brand.name}
@@ -316,7 +316,7 @@ export default function Home() {
                   {...staggerItem}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="group rounded-2xl border border-brand-border bg-brand-bg p-6 transition-all duration-300 hover:border-phyto-accent/30 hover:shadow-lg hover:shadow-phyto-accent/5"
+                  className="group rounded-lg bg-brand-bg p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:shadow-phyto-accent/5"
                 >
                   <div className="relative">
                     <div className="absolute -inset-2 rounded-full bg-phyto-accent/0 blur-xl transition-all duration-500 group-hover:bg-phyto-accent/10" aria-hidden="true" />
@@ -348,7 +348,7 @@ export default function Home() {
             {[...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS].map((client, i) => (
               <div
                 key={`client-${client.name}-${i}`}
-                className="mx-4 flex h-20 w-44 shrink-0 items-center justify-center rounded-xl border border-brand-border bg-brand-surface text-sm font-semibold text-brand-muted transition-all duration-300 hover:border-phyto-accent/30 hover:shadow-lg hover:shadow-phyto-accent/5"
+                className="mx-4 flex h-16 w-40 shrink-0 items-center justify-center rounded-md bg-brand-surface text-sm font-semibold text-brand-muted shadow-sm transition-all duration-300 hover:shadow-md hover:text-brand-text"
               >
                 {client.imagePlaceholder}
               </div>
@@ -379,7 +379,7 @@ export default function Home() {
                   transition={{ delay: i * 0.1 }}
                   className="group block no-underline"
                 >
-                  <div className="relative overflow-hidden rounded-2xl border border-brand-border bg-brand-surface p-6 text-center transition-all duration-300 hover:border-phyto-accent/30 hover:shadow-xl hover:shadow-phyto-accent/5">
+                  <div className="relative overflow-hidden rounded-lg bg-brand-surface p-6 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-phyto-accent/5">
                     <div
                       aria-hidden="true"
                       className="pointer-events-none absolute -top-20 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-phyto-accent/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
@@ -407,7 +407,7 @@ export default function Home() {
         <ParticleField count={20} color="rgba(0, 155, 58, 0.12)" />
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <motion.div {...fadeUpLarge}>
-            <div className="relative mx-auto aspect-video max-w-3xl overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-phyto-accent/10">
+            <div className="relative mx-auto aspect-video max-w-3xl overflow-hidden rounded-xl border border-white/6 shadow-2xl shadow-phyto-accent/10">
               <iframe
                 src="https://www.youtube.com/embed/VTp5H6-_1cA?rel=0&modestbranding=1"
                 title="Video Institucional Phytonatus"

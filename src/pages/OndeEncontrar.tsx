@@ -78,7 +78,7 @@ export default function OndeEncontrar() {
             {[...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS].map((client, i) => (
               <div
                 key={`client-${client.name}-${i}`}
-                className="mx-4 flex h-24 w-48 shrink-0 items-center justify-center rounded-2xl border border-brand-border bg-brand-surface text-base font-semibold text-brand-muted transition-all duration-300 hover:border-phyto-accent/30 hover:shadow-lg hover:shadow-phyto-accent/5 hover:text-brand-text"
+                className="mx-4 flex h-20 w-44 shrink-0 items-center justify-center rounded-md bg-brand-surface text-base font-semibold text-brand-muted shadow-sm transition-all duration-300 hover:shadow-md hover:text-brand-text"
               >
                 {client.imagePlaceholder}
               </div>
@@ -116,7 +116,7 @@ export default function OndeEncontrar() {
                   rel="noopener noreferrer"
                   className="block no-underline"
                 >
-                  <div className="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-surface p-8 text-center transition-all duration-300 hover:border-phyto-accent/30 hover:shadow-xl hover:shadow-phyto-accent/5">
+                  <div className="group relative overflow-hidden rounded-lg bg-brand-surface p-8 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-phyto-accent/5">
                     <div
                       aria-hidden="true"
                       className="pointer-events-none absolute -top-24 left-1/2 h-48 w-48 -translate-x-1/2 rounded-full bg-phyto-accent/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"

@@ -156,10 +156,10 @@ export default function Institucional() {
             >
               <div className="relative">
                 <div
-                  className="absolute -right-3 -bottom-3 h-full w-full rounded-2xl border-2 border-phyto-accent/20"
+                  className="absolute -right-3 -bottom-3 h-full w-full rounded-xl border border-phyto-accent/15"
                   aria-hidden="true"
                 />
-                <div className="relative overflow-hidden rounded-2xl">
+                <div className="relative overflow-hidden rounded-xl">
                   <img
                     src={imgQuality}
                     alt="Controle de qualidade na fabrica Phytonatus"
@@ -198,9 +198,9 @@ export default function Institucional() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.12, duration: 0.5 }}
                 whileHover={{ scale: 1.02, y: -4 }}
-                className="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-bg shadow-lg transition-shadow duration-300 hover:shadow-2xl"
+                className="group relative overflow-hidden rounded-xl bg-brand-bg shadow-md transition-shadow duration-300 hover:shadow-xl"
               >
-                <div className="aspect-video overflow-hidden">
+                <div className="aspect-[16/10] overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.label}
@@ -250,7 +250,7 @@ export default function Institucional() {
           </motion.div>
 
           <motion.div {...fadeUp} transition={{ delay: 0.2 }} className="mt-12">
-            <div className="relative mx-auto aspect-video max-w-4xl overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-phyto-accent/10">
+            <div className="relative mx-auto aspect-video max-w-4xl overflow-hidden rounded-xl border border-white/6 shadow-2xl shadow-phyto-accent/10">
               <iframe
                 src="https://www.youtube.com/embed/VTp5H6-_1cA?rel=0&modestbranding=1"
                 title="Video Institucional Phytonatus"

@@ -47,7 +47,7 @@ export function BrandSlice({
             {/* Logo placeholder */}
             <motion.div
               whileHover={{ rotate: 3, scale: 1.05 }}
-              className="mb-6 inline-flex size-16 items-center justify-center rounded-2xl text-white text-2xl font-bold font-display shadow-lg"
+              className="mb-6 inline-flex size-16 items-center justify-center rounded-xl text-white text-2xl font-bold font-display shadow-lg"
               style={{
                 backgroundColor: accentColor,
                 boxShadow: `0 8px 32px ${accentColor}30`,
@@ -96,8 +96,8 @@ export function BrandSlice({
           {/* Image */}
           <motion.div {...fadeUp} transition={{ delay: 0.15 }} style={{ direction: "ltr" }} className="relative">
             <TiltCard tiltDegree={5} glareColor={`${accentColor}10`}>
-              <div className="absolute -inset-4 rounded-3xl opacity-10 blur-2xl" style={{ backgroundColor: accentColor }} aria-hidden="true" />
-              <div className="relative overflow-hidden rounded-2xl border border-brand-border shadow-lg transition-shadow duration-500 hover:shadow-xl">
+              <div className="absolute -inset-4 rounded-2xl opacity-10 blur-2xl" style={{ backgroundColor: accentColor }} aria-hidden="true" />
+              <div className="relative overflow-hidden rounded-xl shadow-md transition-shadow duration-500 hover:shadow-lg">
                 <img
                   src={image}
                   alt={`Produtos ${name}`}

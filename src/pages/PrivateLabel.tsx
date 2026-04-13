@@ -146,14 +146,14 @@ export default function PrivateLabel() {
               transition={{ duration: 0.6 }}
               className="group relative md:col-span-7 md:row-span-2"
             >
-              <div className="relative overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.01]">
+              <div className="relative overflow-hidden rounded-xl transition-transform duration-500 group-hover:scale-[1.01]">
                 <img
                   src={imgProduction}
                   alt="Linha de producao"
                   className="w-full h-full object-cover aspect-[4/3] transition-all duration-700 group-hover:brightness-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 rounded-2xl border-2 border-transparent transition-colors duration-500 group-hover:border-phyto-accent/20" />
+                <div className="absolute inset-0 rounded-xl border border-transparent transition-colors duration-500 group-hover:border-phyto-accent/20" />
               </div>
               <div
                 className="absolute -bottom-6 -left-6 -z-10 size-32 rounded-full bg-phyto-accent/10 blur-2xl"
@@ -169,14 +169,14 @@ export default function PrivateLabel() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="group relative md:col-span-5"
             >
-              <div className="relative overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+              <div className="relative overflow-hidden rounded-xl transition-transform duration-500 group-hover:scale-[1.02]">
                 <img
                   src={imgQuality}
                   alt="Controle de qualidade"
                   className="w-full h-auto object-cover aspect-video transition-all duration-700 group-hover:brightness-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 rounded-2xl border-2 border-transparent transition-colors duration-500 group-hover:border-phyto-accent/20" />
+                <div className="absolute inset-0 rounded-xl border border-transparent transition-colors duration-500 group-hover:border-phyto-accent/20" />
               </div>
             </motion.div>
 
@@ -188,14 +188,14 @@ export default function PrivateLabel() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="group relative md:col-span-5 md:-mt-8"
             >
-              <div className="relative overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+              <div className="relative overflow-hidden rounded-xl transition-transform duration-500 group-hover:scale-[1.02]">
                 <img
                   src={imgWarehouse}
                   alt="Estoque e logistica"
                   className="w-full h-auto object-cover aspect-video transition-all duration-700 group-hover:brightness-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 rounded-2xl border-2 border-transparent transition-colors duration-500 group-hover:border-phyto-accent/20" />
+                <div className="absolute inset-0 rounded-xl border border-transparent transition-colors duration-500 group-hover:border-phyto-accent/20" />
               </div>
               <div
                 className="absolute -right-8 -top-8 -z-10 size-40 rounded-full bg-phyto-accent/10 blur-2xl"
@@ -234,7 +234,7 @@ export default function PrivateLabel() {
                 {...staggerItem}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.12 }}
-                className="group relative rounded-2xl border border-brand-border bg-brand-bg p-10 text-center transition-all duration-500 hover:border-phyto-accent/30 hover:shadow-lg hover:shadow-phyto-accent/5"
+                className="group relative rounded-lg bg-brand-bg p-10 text-center shadow-sm transition-all duration-500 hover:shadow-md hover:shadow-phyto-accent/5"
               >
                 {/* Accent glow behind icon on hover */}
                 <div
@@ -242,7 +242,7 @@ export default function PrivateLabel() {
                   aria-hidden="true"
                 />
 
-                <div className="relative mx-auto flex size-16 items-center justify-center rounded-2xl bg-phyto-accent/10 transition-all duration-500 group-hover:bg-phyto-accent/20 group-hover:scale-110">
+                <div className="relative mx-auto flex size-16 items-center justify-center rounded-xl bg-phyto-accent/10 transition-all duration-500 group-hover:bg-phyto-accent/20 group-hover:scale-110">
                   <cap.icon className="size-8 text-phyto-accent transition-transform duration-500 group-hover:scale-110" />
                 </div>
 
