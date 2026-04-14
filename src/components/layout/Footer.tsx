@@ -7,7 +7,14 @@ import { AnimatedHoneycomb } from "@/components/effects/AnimatedHoneycomb"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { LOJA_URL } from "@/lib/constants"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { LOJA_URL, CONTACT_DESTINATIONS } from "@/lib/constants"
 
 const footerLinks = [
   { label: "Home", href: "/" },
@@ -19,12 +26,12 @@ const footerLinks = [
 ]
 
 export function Footer() {
-  const [formData, setFormData] = useState({ nome: "", contato: "", mensagem: "" })
+  const [formData, setFormData] = useState({ setor: "", nome: "", contato: "", mensagem: "" })
   const [sending, setSending] = useState(false)
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (!formData.nome || !formData.contato || !formData.mensagem) {
+    if (!formData.setor || !formData.nome || !formData.contato || !formData.mensagem) {
       toast.error("Preencha todos os campos.")
       return
     }
@@ -35,7 +42,7 @@ export function Footer() {
       toast.success("Mensagem enviada com sucesso!", {
         description: "Retornaremos o contato em breve.",
       })
-      setFormData({ nome: "", contato: "", mensagem: "" })
+      setFormData({ setor: "", nome: "", contato: "", mensagem: "" })
       setSending(false)
     }, 500)
   }
@@ -100,6 +107,21 @@ export function Footer() {
           <div className="lg:col-span-7">
             <h3 className="font-display text-sm font-bold uppercase tracking-widest text-white/40">Fale conosco</h3>
             <form onSubmit={handleSubmit} className="mt-4 space-y-3">
+              <Select
+                value={formData.setor}
+                onValueChange={(value) => setFormData(prev => ({ ...prev, setor: value ?? "" }))}
+              >
+                <SelectTrigger className="border-white/10 bg-white/5 text-white data-[placeholder]:text-white/30 focus:border-phyto-accent/40">
+                  <SelectValue placeholder="Selecione o setor" />
+                </SelectTrigger>
+                <SelectContent>
+                  {CONTACT_DESTINATIONS.map((dest) => (
+                    <SelectItem key={dest.value} value={dest.value}>
+                      {dest.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
               <div className="grid gap-3 sm:grid-cols-2">
                 <Input
                   placeholder="Seu nome"
