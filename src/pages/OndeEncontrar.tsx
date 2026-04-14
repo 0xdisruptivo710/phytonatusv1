@@ -1,14 +1,13 @@
 import { motion } from "framer-motion"
 import { ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { AnimatedHoneycomb } from "@/components/effects/AnimatedHoneycomb"
-import { ParticleField } from "@/components/effects/ParticleField"
 import { fadeUp, fadeUpLarge, pageTransition } from "@/lib/animations"
 import {
   LOJA_URL,
   AMAZON_URL,
   MERCADO_LIVRE_URL,
   SUPERMARKET_CLIENTS,
+  imgWarehouse,
 } from "@/lib/constants"
 
 const digitalChannels = [
@@ -20,7 +19,7 @@ const digitalChannels = [
   {
     name: "Amazon",
     url: AMAZON_URL,
-    description: "Compre com entrega rapida pela Amazon",
+    description: "Compre com entrega rápida pela Amazon",
   },
   {
     name: "Mercado Livre",
@@ -33,13 +32,13 @@ export default function OndeEncontrar() {
   return (
     <motion.div {...pageTransition}>
       {/* Hero */}
-      <section className="grain relative overflow-hidden bg-brand-dark py-24 md:py-36">
-        <AnimatedHoneycomb id="onde-honeycomb" />
-        <ParticleField count={20} />
+      <section className="relative overflow-hidden py-24 md:py-36">
+        <img src={imgWarehouse} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/65 via-brand-dark/45 to-brand-dark/75" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
           <motion.div {...fadeUp}>
             <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-widest text-phyto-accent">
-              Distribuicao
+              Distribuição
             </span>
             <h1 {...fadeUpLarge} className="font-display text-6xl font-bold text-balance text-brand-cream md:text-7xl">
               Nossos
@@ -47,8 +46,8 @@ export default function OndeEncontrar() {
               <span className="text-gradient-green">Clientes</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-pretty text-brand-cream/60">
-              Estamos presentes nas principais redes de varejo e tambem online.
-              Escolha o canal mais conveniente para voce.
+              Estamos presentes nas principais redes de varejo e também online.
+              Escolha o canal mais conveniente para você.
             </p>
           </motion.div>
         </div>

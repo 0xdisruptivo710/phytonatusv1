@@ -60,7 +60,7 @@ export function Footer() {
               <span className="font-display text-xl font-bold text-white">Phytonatus</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-pretty leading-relaxed text-white/35">
-              Produtos naturais com ingrediente unico, rotulo limpo e marcas com identidade.
+              Produtos naturais com ingrediente único, rótulo limpo e marcas com identidade.
             </p>
             <div className="mt-4 flex items-center gap-2 text-white/20">
               <Leaf className="size-4 text-phyto-accent/50" aria-hidden="true" />
@@ -139,7 +139,7 @@ export function Footer() {
           <p className="text-xs text-white/25">
             &copy; {new Date().getFullYear()} Phytonatus &middot; Todos os direitos reservados
           </p>
-          <p className="text-xs text-white/15">Ingrediente unico &middot; Rotulo limpo</p>
+          <p className="text-xs text-white/15">Ingrediente único &middot; Rótulo limpo</p>
         </div>
       </div>
     </footer>

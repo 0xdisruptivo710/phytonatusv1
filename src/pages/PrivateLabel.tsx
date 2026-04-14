@@ -34,20 +34,9 @@ export default function PrivateLabel() {
   return (
     <motion.div {...pageTransition}>
       {/* ═══════════════════════════════════ HERO ═══════════════════════════════════ */}
-      <section className="relative min-h-[80vh] overflow-hidden bg-brand-dark grain flex items-center">
-        <AnimatedHoneycomb id="pl-hero-honeycomb" />
-        <ParticleField count={25} />
-
-        {/* Organic ambient blobs */}
-        <div
-          className="absolute -left-40 -top-40 size-[500px] rounded-full bg-phyto-accent/8 blur-3xl animate-pulse-soft"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute -right-32 bottom-0 size-96 rounded-full bg-phyto-accent/8 blur-3xl animate-pulse-soft"
-          style={{ animationDelay: "2s" }}
-          aria-hidden="true"
-        />
+      <section className="relative min-h-[80vh] overflow-hidden flex items-center">
+        <img src={imgProduction} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/65 via-brand-dark/45 to-brand-dark/75" />
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-28 md:py-36">
           <motion.div {...fadeUpLarge} className="max-w-4xl">
@@ -149,7 +138,7 @@ export default function PrivateLabel() {
               <div className="relative overflow-hidden rounded-xl transition-transform duration-500 group-hover:scale-[1.01]">
                 <img
                   src={imgProduction}
-                  alt="Linha de producao"
+                  alt="Linha de produção"
                   className="w-full h-full object-cover aspect-[4/3] transition-all duration-700 group-hover:brightness-110"
                   loading="lazy"
                 />
@@ -191,7 +180,7 @@ export default function PrivateLabel() {
               <div className="relative overflow-hidden rounded-xl transition-transform duration-500 group-hover:scale-[1.02]">
                 <img
                   src={imgWarehouse}
-                  alt="Estoque e logistica"
+                  alt="Estoque e logística"
                   className="w-full h-auto object-cover aspect-video transition-all duration-700 group-hover:brightness-110"
                   loading="lazy"
                 />

@@ -3,18 +3,16 @@ import { Download, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { BrandSlice } from "@/components/sections/BrandSlice"
-import { AnimatedHoneycomb } from "@/components/effects/AnimatedHoneycomb"
-import { ParticleField } from "@/components/effects/ParticleField"
 import { fadeUp, fadeUpLarge, pageTransition } from "@/lib/animations"
-import { BRANDS, CATALOG_PDF_URL, NUTRITION_ALL_PDF_URL, LOJA_URL } from "@/lib/constants"
+import { BRANDS, CATALOG_PDF_URL, NUTRITION_ALL_PDF_URL, LOJA_URL, imgShelf } from "@/lib/constants"
 
 export default function Marcas() {
   return (
     <motion.div {...pageTransition}>
       {/* Hero */}
-      <section className="relative min-h-[60vh] overflow-hidden bg-brand-dark grain flex items-center">
-        <AnimatedHoneycomb id="marcas-honeycomb" />
-        <ParticleField count={20} />
+      <section className="relative min-h-[60vh] overflow-hidden flex items-center">
+        <img src={imgShelf} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/60 via-brand-dark/40 to-brand-dark/70" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 text-center md:py-32">
           <motion.div {...fadeUpLarge}>
             <span className="mb-4 inline-block text-xs font-bold uppercase tracking-widest text-phyto-accent">Portfolio</span>
@@ -22,7 +20,7 @@ export default function Marcas() {
               Nossas <span className="text-gradient-green">Marcas</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-pretty text-white/50">
-              Cada marca do grupo Phytonatus carrega uma identidade unica, unida pelo compromisso com ingredientes puros e rotulo limpo.
+              Cada marca do grupo Phytonatus carrega uma identidade única, unida pelo compromisso com ingredientes puros e rótulo limpo.
             </p>
           </motion.div>
         </div>
@@ -63,7 +61,7 @@ export default function Marcas() {
             <a href={CATALOG_PDF_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="gap-2 bg-phyto-accent hover:bg-phyto-accent/90">
                 <Download className="size-4" />
-                Baixar Catalogo Completo (PDF)
+                Baixar Catálogo Completo (PDF)
               </Button>
             </a>
             <a href={NUTRITION_ALL_PDF_URL} target="_blank" rel="noopener noreferrer">

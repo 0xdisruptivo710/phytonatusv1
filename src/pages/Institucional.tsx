@@ -2,15 +2,15 @@ import { motion } from "framer-motion"
 
 
 import { QualitySeals } from "@/components/sections/QualitySeals"
-import { AnimatedHoneycomb } from "@/components/effects/AnimatedHoneycomb"
-import { ParticleField } from "@/components/effects/ParticleField"
+
+
 import { fadeUp, pageTransition } from "@/lib/animations"
 import { QUALITY_SEALS, imgWarehouse, imgProduction, imgQuality, imgAllProducts } from "@/lib/constants"
 
 const galleryItems = [
-  { label: "Area de producao", image: imgProduction },
+  { label: "Área de produção", image: imgProduction },
   { label: "Controle de qualidade", image: imgQuality },
-  { label: "Estoque e logistica", image: imgWarehouse },
+  { label: "Estoque e logística", image: imgWarehouse },
   { label: "Nossos produtos", image: imgAllProducts },
 ]
 
@@ -18,19 +18,9 @@ export default function Institucional() {
   return (
     <motion.div {...pageTransition}>
       {/* ═══════════════════════════════════ HERO ═══════════════════════════════════ */}
-      <section className="relative min-h-[80vh] overflow-hidden bg-brand-dark grain">
-        <AnimatedHoneycomb id="inst-honeycomb" />
-        <ParticleField count={25} />
-
-        <div
-          className="absolute -left-40 -top-40 size-[500px] rounded-full bg-phyto-accent/8 blur-3xl animate-pulse-soft"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute -right-32 bottom-0 size-96 rounded-full bg-phyto-accent/8 blur-3xl animate-pulse-soft"
-          style={{ animationDelay: "2s" }}
-          aria-hidden="true"
-        />
+      <section className="relative min-h-[80vh] overflow-hidden">
+        <img src={imgAllProducts} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/60 via-brand-dark/40 to-brand-dark/70" />
 
         <div className="relative z-10 mx-auto flex min-h-[80vh] max-w-7xl flex-col items-center justify-center px-6 text-center">
           <motion.span
@@ -48,7 +38,7 @@ export default function Institucional() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="max-w-5xl text-balance font-display text-6xl font-bold leading-[1.05] text-white md:text-7xl lg:text-8xl"
           >
-            Conheca a{" "}
+            Conheça a{" "}
             <span className="text-gradient-green">Phytonatus</span>
           </motion.h1>
 
@@ -58,7 +48,7 @@ export default function Institucional() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-8 max-w-2xl font-display text-xl italic text-white/50 md:text-2xl"
           >
-            Tradicao, qualidade e compromisso com a natureza em cada produto que
+            Tradição, qualidade e compromisso com a natureza em cada produto que
             produzimos.
           </motion.p>
 
@@ -109,7 +99,7 @@ export default function Institucional() {
           <div className="grid items-center gap-16 lg:grid-cols-12">
             <motion.div {...fadeUp} className="lg:col-span-7">
               <span className="text-xs font-medium uppercase tracking-widest text-phyto-accent">
-                Nossa Historia
+                Nossa História
               </span>
 
               <h2 className="mt-6 text-balance font-display text-5xl font-bold leading-tight md:text-6xl lg:text-7xl">
@@ -126,16 +116,16 @@ export default function Institucional() {
                 <div className="space-y-5">
                   <p className="max-w-lg text-pretty text-lg leading-relaxed text-brand-muted">
                     A Phytonatus nasceu do desejo de levar produtos naturais de
-                    qualidade para a mesa dos brasileiros. Desde o inicio, nossa
-                    missao tem sido trabalhar com ingredientes puros, processos
-                    transparentes e respeito a origem de cada materia-prima.
+                    qualidade para a mesa dos brasileiros. Desde o início, nossa
+                    missão tem sido trabalhar com ingredientes puros, processos
+                    transparentes e respeito à origem de cada matéria-prima.
                   </p>
                   <p className="max-w-lg text-pretty text-lg leading-relaxed text-brand-muted">
                     Ao longo dos anos, expandimos nossa linha de produtos e
-                    criamos marcas com identidades proprias, cada uma atendendo a
-                    um segmento especifico do mercado de alimentos naturais.
-                    Hoje, somos referencia no setor, atendendo redes de varejo em
-                    todo o pais.
+                    criamos marcas com identidades próprias, cada uma atendendo a
+                    um segmento específico do mercado de alimentos naturais.
+                    Hoje, somos referência no setor, atendendo redes de varejo em
+                    todo o país.
                   </p>
                 </div>
               </div>
@@ -145,7 +135,7 @@ export default function Institucional() {
                 transition={{ delay: 0.3 }}
                 className="mt-10 max-w-md font-display text-xl italic text-brand-muted/70 md:text-2xl"
               >
-                "Ingrediente unico, rotulo limpo, marcas com identidade."
+                "Ingrediente único, rótulo limpo, marcas com identidade."
               </motion.p>
             </motion.div>
 
@@ -184,7 +174,7 @@ export default function Institucional() {
               <span className="text-gradient-green">Infraestrutura</span>
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-pretty text-brand-muted">
-              Infraestrutura completa para producao com qualidade e escala
+              Infraestrutura completa para produção com qualidade e escala
             </p>
           </motion.div>
 
@@ -229,31 +219,23 @@ export default function Institucional() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════ VIDEO ═══════════════════════════════ */}
-      <section className="relative overflow-hidden bg-brand-dark py-28 md:py-36 grain">
-        <AnimatedHoneycomb id="inst-video-honeycomb" />
-        <ParticleField count={15} color="rgba(61, 92, 58, 0.12)" />
-
-        <div
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-[600px] rounded-full bg-phyto-accent/5 blur-3xl"
-          aria-hidden="true"
-        />
-
+      {/* ═══════════════════════════════ VÍDEO ═══════════════════════════════ */}
+      <section className="relative py-28 md:py-36 bg-brand-cream/30">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <motion.div {...fadeUp} className="text-center">
             <span className="text-xs font-medium uppercase tracking-widest text-phyto-accent">
               Assista
             </span>
-            <h2 className="mt-4 text-balance font-display text-5xl font-bold text-white md:text-6xl lg:text-7xl">
-              Video Institucional
+            <h2 className="mt-4 text-balance font-display text-5xl font-bold md:text-6xl lg:text-7xl">
+              Vídeo Institucional
             </h2>
           </motion.div>
 
           <motion.div {...fadeUp} transition={{ delay: 0.2 }} className="mt-12">
-            <div className="relative mx-auto aspect-video max-w-4xl overflow-hidden rounded-xl border border-white/6 shadow-2xl shadow-phyto-accent/10">
+            <div className="relative mx-auto aspect-video max-w-4xl overflow-hidden rounded-xl shadow-xl">
               <iframe
                 src="https://www.youtube.com/embed/VTp5H6-_1cA?rel=0&modestbranding=1"
-                title="Video Institucional Phytonatus"
+                title="Vídeo Institucional Phytonatus"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="absolute inset-0 h-full w-full"
@@ -264,9 +246,9 @@ export default function Institucional() {
             <motion.p
               {...fadeUp}
               transition={{ delay: 0.4 }}
-              className="mx-auto mt-10 max-w-2xl text-center font-display text-xl italic text-white/40 md:text-2xl"
+              className="mx-auto mt-10 max-w-2xl text-center font-display text-xl italic text-brand-muted/60 md:text-2xl"
             >
-              "Conheca quem esta por tras de cada produto natural que chega a sua
+              "Conheça quem está por trás de cada produto natural que chega à sua
               mesa."
             </motion.p>
           </motion.div>
@@ -283,14 +265,14 @@ export default function Institucional() {
         <div className="mx-auto max-w-7xl px-6">
           <motion.div {...fadeUp} className="mb-16 text-center">
             <span className="text-xs font-medium uppercase tracking-widest text-phyto-accent">
-              Certificacoes
+              Certificações
             </span>
             <h2 className="mt-4 text-balance font-display text-5xl font-bold md:text-6xl lg:text-7xl">
               Selos de{" "}
               <span className="text-gradient-green">Qualidade</span>
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-pretty text-brand-muted">
-              Certificacoes que garantem a excelencia dos nossos processos
+              Certificações que garantem a excelência dos nossos processos
             </p>
           </motion.div>
           <QualitySeals seals={QUALITY_SEALS} />

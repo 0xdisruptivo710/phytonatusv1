@@ -57,7 +57,7 @@ export const BRANDS = [
   },
   {
     id: "emporio-nuts",
-    name: "Empório Nuts",
+    name: "Empório Nut's",
     tagline: "Mercearia natural do jeito que deveria ser",
     description:
       "Mercearia natural com ingredientes puros: sal rosa, cacau 100%, óleo e farinha de coco, açúcar de coco, temperos, pimentas e cookie infantil sem glúten.",
