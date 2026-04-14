@@ -1,4 +1,4 @@
-// ── Images ──────────────────────────────────────────────────────────
+// ── Product Images ──────────────────────────────────────────────────
 import imgPhytonatus from "@/assets/images/Gemini_Generated_Image_gznhxagznhxagznh.png"
 import imgEmporioDoMel from "@/assets/images/Gemini_Generated_Image_vujvx2vujvx2vujv.png"
 import imgEmporioNuts from "@/assets/images/Gemini_Generated_Image_th2ucfth2ucfth2u.png"
@@ -9,6 +9,23 @@ import imgIngredients from "@/assets/images/Gemini_Generated_Image_4jajwf4jajwf4
 import imgWarehouse from "@/assets/images/close-up-warehouse-view.jpg"
 import imgProduction from "@/assets/images/transparent-plastic-bottles-filled-with-yellow-substance.jpg"
 import imgQuality from "@/assets/images/side-view-woman-working-beer-factory.jpg"
+
+// ── Brand Logos ─────────────────────────────────────────────────────
+import logoPhytonatus from "@/assets/Logos e Selos/marca-phytonatus.png"
+import logoEmporioDoMel from "@/assets/Logos e Selos/marca-emporio-mel.png"
+import logoEmporioNuts from "@/assets/Logos e Selos/marca-emporio-nuts.png"
+import logoVidaGourmet from "@/assets/Logos e Selos/marca-vida-gourmet.png"
+
+// ── Client Logos ────────────────────────────────────────────────────
+import logoSonda from "@/assets/Logos e Selos/sonda-supermercados.png"
+import logoTauste from "@/assets/Logos e Selos/meta-image-01.png"
+
+// ── Quality Seal Images ─────────────────────────────────────────────
+import seloISO from "@/assets/Logos e Selos/iso-9001.png"
+import seloHACCP from "@/assets/Logos e Selos/HACCP.jpeg"
+import seloOrganico from "@/assets/Logos e Selos/selo_organico.jpg"
+import seloSIF from "@/assets/Logos e Selos/selosif.png"
+import seloArte from "@/assets/Logos e Selos/selo-arte-clear.png"
 
 export {
   imgAllProducts,
@@ -40,6 +57,7 @@ export const BRANDS = [
     category: "Mel Flores do Campo",
     accentColor: "var(--color-apicultor-yellow)",
     image: imgPhytonatus,
+    logo: logoPhytonatus,
     storeUrl: "https://loja.phytonatus.com.br/",
     nutritionPdfUrl: "#", // TODO: inserir PDF real
   },
@@ -52,6 +70,7 @@ export const BRANDS = [
     category: "Mel & Derivados",
     accentColor: "var(--color-mel-accent)",
     image: imgEmporioDoMel,
+    logo: logoEmporioDoMel,
     storeUrl: "https://loja.phytonatus.com.br/", // TODO: URL loja Empório do Mel
     nutritionPdfUrl: "#", // TODO: inserir PDF real
   },
@@ -64,7 +83,8 @@ export const BRANDS = [
     category: "Mercearia Natural",
     accentColor: "var(--color-nuts-accent)",
     image: imgEmporioNuts,
-    storeUrl: "https://loja.phytonatus.com.br/", // TODO: URL loja Empório Nuts
+    logo: logoEmporioNuts,
+    storeUrl: "https://loja.phytonatus.com.br/", // TODO: URL loja Empório Nut's
     nutritionPdfUrl: "#", // TODO: inserir PDF real
   },
   {
@@ -76,30 +96,30 @@ export const BRANDS = [
     category: "Premium Gourmet",
     accentColor: "var(--color-gourmet-accent)",
     image: imgVidaGourmet,
+    logo: logoVidaGourmet,
     storeUrl: "https://loja.phytonatus.com.br/", // TODO: URL loja Vida Gourmet
     nutritionPdfUrl: "#", // TODO: inserir PDF real
   },
-  // TODO: Mel Origens — adicionar após lançamento (dez/jan)
 ] as const
 
 export const CATALOG_PDF_URL = "#" // TODO: inserir PDF real
 export const NUTRITION_ALL_PDF_URL = "#" // TODO: inserir PDF tabela nutricional completa
 
 export const QUALITY_SEALS = [
-  { name: "ISO 9001", imagePlaceholder: "ISO 9001" },
-  { name: "HACCP", imagePlaceholder: "HACCP" },
-  { name: "Selo Orgânico", imagePlaceholder: "Orgânico" },
-  { name: "SIF", imagePlaceholder: "SIF" },
-  { name: "Selo Arte", imagePlaceholder: "Selo Arte" },
+  { name: "ISO 9001", image: seloISO },
+  { name: "HACCP", image: seloHACCP },
+  { name: "Selo Orgânico", image: seloOrganico },
+  { name: "SIF", image: seloSIF },
+  { name: "Selo Arte", image: seloArte },
 ]
 
 export const SUPERMARKET_CLIENTS = [
-  { name: "Sonda", imagePlaceholder: "Sonda" },
-  { name: "Tauste", imagePlaceholder: "Tauste" },
-  { name: "Rede 1", imagePlaceholder: "Rede 1" },
-  { name: "Rede 2", imagePlaceholder: "Rede 2" },
-  { name: "Rede 3", imagePlaceholder: "Rede 3" },
-  { name: "Rede 4", imagePlaceholder: "Rede 4" },
+  { name: "Sonda", logo: logoSonda },
+  { name: "Tauste", logo: logoTauste },
+  { name: "Rede 1", logo: null },
+  { name: "Rede 2", logo: null },
+  { name: "Rede 3", logo: null },
+  { name: "Rede 4", logo: null },
 ]
 
 export const CONTACT_DESTINATIONS = [

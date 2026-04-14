@@ -79,7 +79,11 @@ export default function OndeEncontrar() {
                 key={`client-${client.name}-${i}`}
                 className="mx-4 flex h-20 w-44 shrink-0 items-center justify-center rounded-md bg-brand-surface text-base font-semibold text-brand-muted shadow-sm transition-all duration-300 hover:shadow-md hover:text-brand-text"
               >
-                {client.imagePlaceholder}
+                {client.logo ? (
+                  <img src={client.logo} alt={client.name} className="h-8 w-auto object-contain" />
+                ) : (
+                  <span>{client.name}</span>
+                )}
               </div>
             ))}
           </div>

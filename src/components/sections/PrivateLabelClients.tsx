@@ -3,7 +3,7 @@ import { fadeUp, staggerItem } from "@/lib/animations"
 
 interface Client {
   name: string
-  imagePlaceholder: string
+  logo: string | null
 }
 
 interface PrivateLabelClientsProps {
@@ -19,9 +19,13 @@ export function PrivateLabelClients({ clients }: PrivateLabelClientsProps) {
           {...staggerItem}
           viewport={{ once: true }}
           transition={{ delay: i * 0.1 }}
-          className="group flex h-20 w-36 items-center justify-center rounded-xl border border-brand-border bg-brand-surface text-sm font-medium text-brand-muted transition-all duration-300 hover:border-mel-accent/30 hover:shadow-lg hover:shadow-mel-accent/5"
+          className="group flex h-20 w-36 items-center justify-center rounded-lg bg-brand-surface text-sm font-medium text-brand-muted shadow-sm transition-all duration-300 hover:shadow-md"
         >
-          {client.imagePlaceholder}
+          {client.logo ? (
+            <img src={client.logo} alt={client.name} className="h-10 w-auto object-contain" />
+          ) : (
+            <span>{client.name}</span>
+          )}
         </motion.div>
       ))}
     </motion.div>

@@ -19,6 +19,7 @@ interface BrandSliceProps {
 }
 
 export function BrandSlice({
+  logo,
   name,
   tagline,
   description,
@@ -46,14 +47,10 @@ export function BrandSlice({
           <motion.div {...fadeUp} style={{ direction: "ltr" }}>
             {/* Logo placeholder */}
             <motion.div
-              whileHover={{ rotate: 3, scale: 1.05 }}
-              className="mb-6 inline-flex size-16 items-center justify-center rounded-xl text-white text-2xl font-bold font-display shadow-lg"
-              style={{
-                backgroundColor: accentColor,
-                boxShadow: `0 8px 32px ${accentColor}30`,
-              }}
+              whileHover={{ scale: 1.05 }}
+              className="mb-6 inline-block"
             >
-              {name.charAt(0)}
+              <img src={logo} alt={`Logo ${name}`} className="h-14 w-auto object-contain" />
             </motion.div>
 
             <Badge

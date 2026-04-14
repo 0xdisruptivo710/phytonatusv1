@@ -143,8 +143,8 @@ export default function Home() {
           <div className="flex whitespace-nowrap animate-marquee">
             {[...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS].map((seal, i) => (
               <span key={`a-${seal.name}-${i}`} className="mx-6 inline-flex items-center gap-3">
-                <span className="flex h-12 items-center justify-center rounded-full border border-phyto-accent/20 bg-phyto-accent/5 px-5 py-2">
-                  <span className="text-xs font-bold uppercase tracking-widest text-phyto-accent">{seal.name}</span>
+                <span className="flex h-14 items-center justify-center px-4">
+                  <img src={seal.image} alt={seal.name} className="h-10 w-auto object-contain opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
                 </span>
               </span>
             ))}
@@ -189,6 +189,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="p-5">
+                    <img src={brand.logo} alt={brand.name} className="h-8 w-auto object-contain mb-2" />
                     <p className="text-sm leading-relaxed text-brand-muted">{brand.tagline}</p>
                     <div className="mt-4 flex items-center gap-2 text-sm font-medium text-phyto-accent transition-colors">
                       <span className="link-underline">Ver mais</span>
@@ -341,7 +342,11 @@ export default function Home() {
                 key={`client-${client.name}-${i}`}
                 className="mx-4 flex h-16 w-40 shrink-0 items-center justify-center rounded-md bg-brand-surface text-sm font-semibold text-brand-muted shadow-sm transition-all duration-300 hover:shadow-md hover:text-brand-text"
               >
-                {client.imagePlaceholder}
+                {client.logo ? (
+                  <img src={client.logo} alt={client.name} className="h-8 w-auto object-contain" />
+                ) : (
+                  <span>{client.name}</span>
+                )}
               </div>
             ))}
           </div>
