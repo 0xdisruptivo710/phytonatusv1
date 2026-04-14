@@ -138,12 +138,12 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════ SELOS MARQUEE ═══════════════════════════════ */}
-      <section className="overflow-hidden py-10 md:py-14" aria-label="Certificações">
+      <section className="overflow-hidden py-16 md:py-20" aria-label="Certificações">
         <div className="relative">
-          <div className="flex whitespace-nowrap animate-marquee">
+          <div className="flex whitespace-nowrap animate-marquee items-center">
             {[...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS].map((seal, i) => (
-              <span key={`a-${seal.name}-${i}`} className="mx-10 inline-flex items-center">
-                <img src={seal.image} alt={seal.name} className="h-20 w-auto object-contain" />
+              <span key={`a-${seal.name}-${i}`} className="mx-14 inline-flex items-center shrink-0">
+                <img src={seal.image} alt={seal.name} className="h-32 w-auto object-contain" />
               </span>
             ))}
           </div>

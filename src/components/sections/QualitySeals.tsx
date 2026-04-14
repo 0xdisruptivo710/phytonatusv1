@@ -12,22 +12,19 @@ interface QualitySealsProps {
 
 export function QualitySeals({ seals }: QualitySealsProps) {
   return (
-    <motion.div {...fadeUp} className="flex flex-wrap justify-center gap-8">
+    <motion.div {...fadeUp} className="flex flex-wrap justify-center gap-12">
       {seals.map((seal, i) => (
         <motion.div
           key={seal.name}
           {...staggerItem}
           viewport={{ once: true }}
           transition={{ delay: i * 0.1 }}
-          className="group flex flex-col items-center gap-3"
+          className="group flex flex-col items-center gap-4"
         >
-          <div className="relative">
-            <div className="absolute -inset-2 rounded-full bg-phyto-accent/0 blur-xl transition-all duration-500 group-hover:bg-phyto-accent/15" aria-hidden="true" />
-            <div className="relative flex h-28 w-28 items-center justify-center rounded-full border border-brand-border bg-brand-surface transition-all duration-300 group-hover:border-phyto-accent/40 group-hover:shadow-lg group-hover:shadow-phyto-accent/10">
-              <img src={seal.image} alt={seal.name} className="h-20 w-20 object-contain" />
-            </div>
+          <div className="flex h-36 w-36 items-center justify-center rounded-2xl bg-brand-surface p-4 shadow-sm transition-all duration-300 group-hover:shadow-md">
+            <img src={seal.image} alt={seal.name} className="h-28 w-28 object-contain" />
           </div>
-          <span className="text-sm font-bold text-brand-text transition-colors duration-300 group-hover:text-phyto-accent">
+          <span className="text-base font-bold text-brand-text transition-colors duration-300 group-hover:text-phyto-accent">
             {seal.name}
           </span>
         </motion.div>
