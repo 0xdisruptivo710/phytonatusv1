@@ -34,7 +34,7 @@ export default function OndeEncontrar() {
       {/* Hero */}
       <section className="relative overflow-hidden py-24 md:py-36">
         <img src={imgWarehouse} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/65 via-brand-dark/45 to-brand-dark/75" />
+        <div className="absolute inset-0 bg-brand-dark/75" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
           <motion.div {...fadeUp}>
             <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-widest text-phyto-accent">
@@ -77,10 +77,10 @@ export default function OndeEncontrar() {
             {[...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS].map((client, i) => (
               <div
                 key={`client-${client.name}-${i}`}
-                className="mx-4 flex h-20 w-44 shrink-0 items-center justify-center rounded-md bg-brand-surface text-base font-semibold text-brand-muted shadow-sm transition-all duration-300 hover:shadow-md hover:text-brand-text"
+                className="mx-5 flex h-24 w-52 shrink-0 items-center justify-center rounded-lg bg-brand-surface px-4 shadow-sm transition-all duration-300 hover:shadow-md"
               >
                 {client.logo ? (
-                  <img src={client.logo} alt={client.name} className="h-8 w-auto object-contain" />
+                  <img src={client.logo} alt={client.name} className="h-14 w-auto max-w-[160px] object-contain" />
                 ) : (
                   <span>{client.name}</span>
                 )}

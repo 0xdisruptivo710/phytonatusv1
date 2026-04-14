@@ -45,7 +45,7 @@ export default function Home() {
             aria-hidden="true"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/70 via-brand-dark/50 to-brand-dark/80" />
+          <div className="absolute inset-0 bg-brand-dark/70" />
         </motion.div>
 
         <ParticleField count={20} />
@@ -142,10 +142,8 @@ export default function Home() {
         <div className="relative">
           <div className="flex whitespace-nowrap animate-marquee">
             {[...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS].map((seal, i) => (
-              <span key={`a-${seal.name}-${i}`} className="mx-8 inline-flex items-center">
-                <span className="flex h-24 items-center justify-center px-5">
-                  <img src={seal.image} alt={seal.name} className="h-20 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-                </span>
+              <span key={`a-${seal.name}-${i}`} className="mx-10 inline-flex items-center">
+                <img src={seal.image} alt={seal.name} className="h-20 w-auto object-contain" />
               </span>
             ))}
           </div>
@@ -340,10 +338,10 @@ export default function Home() {
             {[...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS, ...SUPERMARKET_CLIENTS].map((client, i) => (
               <div
                 key={`client-${client.name}-${i}`}
-                className="mx-4 flex h-16 w-40 shrink-0 items-center justify-center rounded-md bg-brand-surface text-sm font-semibold text-brand-muted shadow-sm transition-all duration-300 hover:shadow-md hover:text-brand-text"
+                className="mx-5 flex h-24 w-52 shrink-0 items-center justify-center rounded-lg bg-brand-surface px-4 shadow-sm transition-all duration-300 hover:shadow-md"
               >
                 {client.logo ? (
-                  <img src={client.logo} alt={client.name} className="h-8 w-auto object-contain" />
+                  <img src={client.logo} alt={client.name} className="h-14 w-auto max-w-[160px] object-contain" />
                 ) : (
                   <span>{client.name}</span>
                 )}

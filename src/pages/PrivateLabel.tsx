@@ -36,7 +36,7 @@ export default function PrivateLabel() {
       {/* ═══════════════════════════════════ HERO ═══════════════════════════════════ */}
       <section className="relative min-h-[80vh] overflow-hidden flex items-center">
         <img src={imgProduction} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/65 via-brand-dark/45 to-brand-dark/75" />
+        <div className="absolute inset-0 bg-brand-dark/75" />
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-28 md:py-36">
           <motion.div {...fadeUpLarge} className="max-w-4xl">

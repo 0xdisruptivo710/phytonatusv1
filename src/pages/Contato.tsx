@@ -84,7 +84,7 @@ export default function Contato() {
       {/* Hero */}
       <section className="relative overflow-hidden py-24 md:py-36">
         <img src={imgQuality} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/65 via-brand-dark/45 to-brand-dark/75" />
+        <div className="absolute inset-0 bg-brand-dark/75" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
           <motion.div {...fadeUp}>
             <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-widest text-phyto-accent">

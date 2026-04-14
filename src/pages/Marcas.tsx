@@ -12,7 +12,7 @@ export default function Marcas() {
       {/* Hero */}
       <section className="relative min-h-[60vh] overflow-hidden flex items-center">
         <img src={imgShelf} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/60 via-brand-dark/40 to-brand-dark/70" />
+        <div className="absolute inset-0 bg-brand-dark/75" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 text-center md:py-32">
           <motion.div {...fadeUpLarge}>
             <span className="mb-4 inline-block text-xs font-bold uppercase tracking-widest text-phyto-accent">Portfolio</span>
@@ -40,7 +40,7 @@ export default function Marcas() {
             </div>
           )}
           <BrandSlice
-            logo={`/logos/${brand.id}.svg`}
+            logo={brand.logo}
             name={brand.name}
             tagline={brand.tagline}
             description={brand.description}
