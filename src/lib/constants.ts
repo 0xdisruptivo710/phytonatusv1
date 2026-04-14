@@ -11,21 +11,21 @@ import imgProduction from "@/assets/images/transparent-plastic-bottles-filled-wi
 import imgQuality from "@/assets/images/side-view-woman-working-beer-factory.jpg"
 
 // ── Brand Logos ─────────────────────────────────────────────────────
-import logoPhytonatus from "@/assets/Logos e Selos/marca-phytonatus.png"
-import logoEmporioDoMel from "@/assets/Logos e Selos/marca-emporio-mel.png"
-import logoEmporioNuts from "@/assets/Logos e Selos/marca-emporio-nuts.png"
-import logoVidaGourmet from "@/assets/Logos e Selos/marca-vida-gourmet.png"
+import logoPhytonatus from "@/assets/logos/marca-phytonatus.png"
+import logoEmporioDoMel from "@/assets/logos/marca-emporio-mel.png"
+import logoEmporioNuts from "@/assets/logos/marca-emporio-nuts.png"
+import logoVidaGourmet from "@/assets/logos/marca-vida-gourmet.png"
 
 // ── Client Logos ────────────────────────────────────────────────────
-import logoSonda from "@/assets/Logos e Selos/sonda-supermercados.png"
-import logoTauste from "@/assets/Logos e Selos/meta-image-01.png"
+import logoSonda from "@/assets/logos/sonda-supermercados.png"
+import logoTauste from "@/assets/logos/tauste.png"
 
 // ── Quality Seal Images ─────────────────────────────────────────────
-import seloISO from "@/assets/Logos e Selos/iso-9001.png"
-import seloHACCP from "@/assets/Logos e Selos/HACCP.jpeg"
-import seloOrganico from "@/assets/Logos e Selos/selo_organico.jpg"
-import seloSIF from "@/assets/Logos e Selos/selosif.png"
-import seloArte from "@/assets/Logos e Selos/selo-arte-clear.png"
+import seloISO from "@/assets/selos/iso-9001.png"
+import seloHACCP from "@/assets/selos/HACCP.jpeg"
+import seloOrganico from "@/assets/selos/selo_organico.jpg"
+import seloSIF from "@/assets/selos/selosif.png"
+import seloArte from "@/assets/selos/selo-arte-clear.png"
 
 export {
   imgAllProducts,

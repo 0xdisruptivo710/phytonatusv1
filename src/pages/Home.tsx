@@ -142,9 +142,9 @@ export default function Home() {
         <div className="relative">
           <div className="flex whitespace-nowrap animate-marquee">
             {[...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS, ...QUALITY_SEALS].map((seal, i) => (
-              <span key={`a-${seal.name}-${i}`} className="mx-6 inline-flex items-center gap-3">
-                <span className="flex h-14 items-center justify-center px-4">
-                  <img src={seal.image} alt={seal.name} className="h-10 w-auto object-contain opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
+              <span key={`a-${seal.name}-${i}`} className="mx-8 inline-flex items-center">
+                <span className="flex h-24 items-center justify-center px-5">
+                  <img src={seal.image} alt={seal.name} className="h-20 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
                 </span>
               </span>
             ))}
